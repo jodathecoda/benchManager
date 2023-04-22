@@ -1,0 +1,326 @@
+import tkinter as tk
+from tkinter import ttk
+from PIL import Image, ImageTk
+import os
+from os.path import exists
+from configparser import ConfigParser
+import subprocess
+from tkinter import filedialog
+import shutil
+
+cwd = os.getcwd()
+
+def submit_data(param, pc, oem, duts, notes):
+    config = ConfigParser()  
+
+    folder_name = cwd + "\\benches\\bench" + str(param)
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+
+    bench_file = folder_name +"\\bench" + str(param) + ".ini"
+    f = open(bench_file, "w+")
+    #f.write("Now the file has more content!")
+    f.close()
+    config.read(bench_file)
+
+    config.add_section('bench')
+    config.set('bench', 'pc', str(pc))
+    config.set('bench', 'oem', str(oem))
+    config.set('bench', 'duts', str(duts))
+
+    config.add_section('notes')
+    config.set('notes', 'note', str(notes))
+
+    # save to a file
+    with open(bench_file, 'w') as configfile:
+        config.write(configfile)
+
+
+def button_edit_handler(param):
+        print("edit:", param)
+        config = ConfigParser()
+
+        #pop up edit window
+        editor = tk.Tk()
+        editor.title("Editor")
+        editor.geometry("200x120+800+300")
+        editor.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Options.ico")
+
+        #check if file exists to enter prompt text
+        #clear prompts
+        pc_prompt = ""
+        oem_prompt = ""
+        duts_prompt = ""
+        notes_prompt = ""
+        filename = "benches\\bench" + str(param) + "\\bench" + str(param) + ".ini"
+
+        if os.path.isfile(filename):
+            #print(filename + " exists")
+            config.read(filename)
+            pc_prompt = config.get('bench', 'pc')
+            oem_prompt = config.get('bench', 'oem')
+            duts_prompt = config.get('bench', 'duts')
+            notes_prompt = config.get('notes', 'note')
+        else:
+            pass
+            #print(filename + " does not exists")
+
+        pc_label = tk.Label(editor, text="pc:")
+        pc_label.grid(row=0, column=0)
+        pc_entry = tk.Entry(editor)
+        pc_entry.insert(0, pc_prompt)
+        pc_entry.grid(row=0, column=1)
+
+        oem_label = tk.Label(editor, text="project:")
+        oem_label.grid(row=1, column=0)
+        oem_entry = tk.Entry(editor)
+        oem_entry.insert(0, oem_prompt)
+        oem_entry.grid(row=1, column=1)
+
+        duts_label = tk.Label(editor, text="duts:")
+        duts_label.grid(row=2, column=0)
+        duts_entry = tk.Entry(editor)
+        duts_entry.insert(0, duts_prompt)
+        duts_entry.grid(row=2, column=1)
+
+        # create a Text widget with a height of 4 and width of 50
+        text_label = tk.Label(editor, text="notes:")
+        text_label.grid(row=3, column=0)
+        notes_entry = tk.Entry(editor)
+        notes_entry.insert(0, notes_prompt)
+        notes_entry.grid(row=3, column=1)
+
+        submit_button = tk.Button(editor, text="SUBMIT", command=lambda: submit_data(param, pc_entry.get(), oem_entry.get(), duts_entry.get(), notes_entry.get()))
+
+        submit_button.grid(row=4, column=1)
+
+
+        editor.mainloop()
+
+def button_view_handler(param):
+    config = ConfigParser()
+    filename = "benches\\bench" + str(param) + "\\bench" + str(param) + ".ini"
+    if os.path.isfile(filename):
+        config.read(filename)
+        pc = config.get('bench', 'pc')
+        oem = config.get('bench', 'oem')
+        duts = config.get('bench', 'duts')
+        notes = config.get('notes', 'note')
+        viewer = tk.Tk()
+        viewer.title("bench" + str(param))
+        viewer.geometry("300x150+800+300")
+        viewer.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Find.ico")
+
+        pc_label = tk.Label(viewer, text="pc: " + pc, anchor='w', justify='left')
+        pc_label.grid(row=0, column=0, sticky='w')
+
+        oem_label = tk.Label(viewer, text="oem: " + oem, anchor='w', justify='left')
+        oem_label.grid(row=1, column=0, sticky='w')
+
+        duts_label = tk.Label(viewer, text="duts: " + duts, anchor='w', justify='left')
+        duts_label.grid(row=2, column=0, sticky='w')
+
+        notes_label = tk.Label(viewer, text=" ------ notes ------", anchor='w', justify='left')
+        notes_label.grid(row=3, column=0, sticky='w')
+
+        actualnotes_label = tk.Label(viewer, text=notes, anchor='w', justify='left', wraplength=280)
+        actualnotes_label.grid(row=4, column=0, sticky='w')
+
+        viewer.mainloop()
+
+
+def button_calendar_handler(param):
+            print("calendar:", param)
+            subprocess.Popen(["python", "selector.py", param])
+
+def button_viewcalendar_handler(param):
+            print("viewcalendar:", param)
+            subprocess.Popen(["python", "calendara.py", param])
+
+def button_folder_handler(param):
+    import os
+import tkinter as tk
+from tkinter import filedialog, messagebox
+
+def button_folder_handler(param):
+    print("file:", param)
+    folder_path = os.path.join(cwd, "benches", f"bench{param}", "configs")
+
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+    # Open a file dialog to select a file
+    selected_file = filedialog.askopenfilename(initialdir=folder_path, title="Select File")
+
+    if selected_file:
+        print(f"Selected file path: {selected_file}")
+        os.startfile(selected_file)
+    else:
+        pass
+        #messagebox.showerror("Error", "No file selected")
+
+
+def button_pics_handler(param):
+            print("pics:", param)
+            folder_path = os.path.join(cwd, "benches", f"bench{param}", "pics")
+
+            if not os.path.exists(folder_path):
+                os.makedirs(folder_path)
+
+            # Open a file dialog to select a file
+            selected_file = filedialog.askopenfilename(initialdir=folder_path, title="Select File")
+
+            if selected_file:
+                print(f"Selected file path: {selected_file}")
+                os.startfile(selected_file)
+            else:
+                pass
+                #messagebox.showerror("Error", "No file selected")
+
+def yess(param):
+    folder_name = cwd + "\\benches\\bench" + str(param)
+    # Delete the folder with the given parameter
+    folder_path = os.path.join(cwd, "benches", f"bench{param}")
+    shutil.rmtree(folder_path)
+
+def noo(param, window):
+    window.destroy()
+
+def button_delete_handler(param):
+            print("delete:", param)
+            pop = tk.Tk()
+            pop.title("Delete")
+            pop.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Delete.ico")
+            pop.geometry("100x50+800+300")
+            pop_label = tk.Label(pop, text="DELETE BENCH ?", anchor='w', justify='left')
+            pop_label.grid(row=0, column=0, sticky='w', columnspan=2) # Set columnspan=2 here
+
+            yes_button = tk.Button(pop, text="YES", command=lambda: yess(param))
+            yes_button.grid(row=1, column=0)
+            no_button = tk.Button(pop, text="NO", command=lambda: noo(param, pop))
+            no_button.grid(row=1, column=1)
+            pop.mainloop()
+
+def button_remotepc_handler(param):
+    print("remotepc:", param)
+    config = ConfigParser()
+    filename = "benches\\bench" + str(param) + "\\bench" + str(param) + ".ini"
+    if os.path.isfile(filename):
+        config.read(filename)
+        pc = config.get('bench', 'pc')
+        subprocess.run(["mstsc", "/v:" + pc])
+    else:
+        pass
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("Benches")
+        self.geometry("380x360")
+        self.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Home.ico")
+
+        self.image_edit = Image.open("pics\\edit.png")
+        self.photo_edit = ImageTk.PhotoImage(self.image_edit)
+
+        self.image_calendar = Image.open("pics\\calendar.png")
+        self.photo_calendar = ImageTk.PhotoImage(self.image_calendar)
+
+        self.image_view = Image.open("pics\\view.png")
+        self.photo_view = ImageTk.PhotoImage(self.image_view)
+
+        self.image_folder = Image.open("pics\\folder.png")
+        self.photo_folder = ImageTk.PhotoImage(self.image_folder)
+
+        self.image_pics = Image.open("pics\\pics.png")
+        self.photo_pics = ImageTk.PhotoImage(self.image_pics)
+
+        self.image_calendarview = Image.open("pics\\calendarview.png")
+        self.photo_calendarview = ImageTk.PhotoImage(self.image_calendarview)
+
+        self.image_remotepc = Image.open("pics\\remotepc.png")
+        self.photo_remotepc = ImageTk.PhotoImage(self.image_remotepc)
+
+        self.image_delete = Image.open("pics\\delete.png")
+        self.photo_delete = ImageTk.PhotoImage(self.image_delete)
+
+        # Create the notebook widget to hold the tabs
+        self.notebook = ttk.Notebook(self, style="Custom.TNotebook")
+        self.notebook.pack(fill="both", expand=True)
+
+        # Create a custom style for the notebook tabs
+        self.style = ttk.Style()
+        self.style.theme_create("CustomTheme", parent="alt", settings={
+            "TNotebook": {"configure": {"tabmargins": [2, 5, 2, 0]}},
+            "TNotebook.Tab": {
+                "configure": {"padding": [10, 5], "background": "#f0f0f0"},
+                "map": {"background": [("selected", "orange"), ("active", "yellow")],
+                        "foreground": [("selected", "#fff"), ("active", "#000")],
+                        "expand": [("selected", [1, 1, 1, 0])]}}})
+        self.style.theme_use("CustomTheme")
+
+        # Create 10 tabs and add them to the notebook
+        for i in range(1, 11):
+            tab = tk.Frame(self.notebook)
+            #self.notebook.add(tab, text=f"{i} - {i+10}")
+            self.notebook.add(tab, text=f"{i*10}")
+
+            # Add 10 buttons to each tab
+            for j in range(1, 11):
+
+                oem_label = ""
+                config = ConfigParser()
+
+                colourr = "grey"
+                file_path = "benches\\" + f"bench{i*10+j-10}" + "\\" + f"bench{i*10+j-10}" + ".ini"
+                if os.path.exists(file_path):
+                    colourr = "blue"
+                    config.read(file_path)
+                    oem_label = config.get('bench', 'oem')
+                else:
+                    colourr = "grey"
+                #button_text = f"bench{i*10+j-10}"
+                button_text = f"bench{i*10+j-10}"
+                button = tk.Button(tab, text=button_text, fg =colourr,
+                                   command=lambda text=button_text: self.print_name(text))
+                button.grid(row=j-1, column=0)
+    
+
+                #button_edit_text = f"edit {i*10+j-10}"
+                button_text = f"{i*10+j-10}"
+                button_edit = tk.Button(tab, image=self.photo_edit, command=lambda text=button_text: button_edit_handler(text))
+                button_edit.grid(row=j-1, column=1)
+                # create the button with the image and the command
+
+                button_view = tk.Button(tab, image=self.photo_view, command=lambda text=button_text: button_view_handler(text))
+                button_view.grid(row=j-1, column=2)
+
+                #button_calendar_text = f"calendar {i*10+j-10}"
+                button_calendar = tk.Button(tab, image=self.photo_calendar, command=lambda text=button_text: button_calendar_handler(text))
+                button_calendar.grid(row=j-1, column=3)
+                # create the button with the image and the command
+
+                button_calendarview = tk.Button(tab, image=self.photo_calendarview, command=lambda text=button_text: button_viewcalendar_handler(text))
+                button_calendarview.grid(row=j-1, column=4)
+
+                button_folder = tk.Button(tab, image=self.photo_folder, command=lambda text=button_text: button_folder_handler(text))
+                button_folder.grid(row=j-1, column=5)
+
+                button_pics = tk.Button(tab, image=self.photo_pics, command=lambda text=button_text: button_pics_handler(text))
+                button_pics.grid(row=j-1, column=6)
+
+                button_remote = tk.Button(tab, image=self.photo_remotepc, command=lambda text=button_text: button_remotepc_handler(text))
+                button_remote.grid(row=j-1, column=7)
+
+                button_delete = tk.Button(tab, image=self.photo_delete, command=lambda text=button_text: button_delete_handler(text))
+                button_delete.grid(row=j-1, column=8)
+
+                oem_label = tk.Label(tab, text=oem_label)
+                oem_label.grid(row=j-1, column=9)
+
+
+    def print_name(self, name):
+        print(name)
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
