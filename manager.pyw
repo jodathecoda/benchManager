@@ -216,6 +216,53 @@ def button_remotepc_handler(param):
     else:
         pass
 
+def get_fg_color(oem_str):
+    #print("fg: "+ oem_str)
+    colorr = 'blue'
+    if 'gmc' in oem_str or 'GMC' in oem_str or 'Porsche' in oem_str or 'PORSCHE' in oem_str or 'Porsche'in oem_str:
+        colorr = 'red'
+    elif 'VOLVO' in oem_str or 'volvo' in oem_str or 'Volvo' in oem_str or 'PSA' in oem_str or 'psa' in oem_str:
+        colorr = 'white'
+    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
+        colorr = 'white'
+    elif 'RSA' in oem_str or 'rsa' in oem_str:
+        colorr = 'black'
+    elif 'BMW' in oem_str or 'bmw' in oem_str:
+        colorr = 'blue'
+    elif 'AUDI' in oem_str or 'audi'in oem_str or 'Audi' in oem_str:
+        colorr = 'black'
+    elif 'Maseratti' in oem_str or 'maseratti' in oem_str or 'MASERATTI' in oem_str:
+        colorr = 'red'
+    else:
+        colorr = 'black'
+    #print("fg: " + colorr)
+    return colorr
+
+def get_bg_color(oem_str):
+    #print("bg: "+ oem_str)
+    colorr = 'yellow'
+    if 'gmc' in oem_str or 'GMC' in oem_str:
+        colorr = 'black'
+    elif 'Porsche' in oem_str or 'PORSCHE' in oem_str or 'Porsche' in oem_str:
+        colorr = 'red'
+    elif 'VOLVO' in oem_str or 'volvo' in oem_str or 'Volvo' in oem_str or 'PSA' in oem_str or 'psa' in oem_str:
+        colorr = 'blue'
+    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
+        colorr = 'black'
+    elif 'RSA' in oem_str or 'rsa' in oem_str:
+        colorr = 'yellow'
+    elif 'BMW' in oem_str or 'bmw' in oem_str:
+        colorr = 'lightblue'
+    elif 'AUDI' in oem_str or 'audi' in oem_str or 'Audi' in oem_str:
+        colorr = 'red'
+    elif 'Maseratti' in oem_str or 'maseratti' in oem_str or 'MASERATTI' in oem_str:
+        colorr = 'blue'
+    else:
+        colorr = 'orange'
+    #print("bg: " + colorr)
+    return colorr
+
+
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -275,16 +322,22 @@ class App(tk.Tk):
                 config = ConfigParser()
 
                 colourr = "grey"
+                back_colourr = "white"
+
                 file_path = "benches\\" + f"bench{i*10+j-10}" + "\\" + f"bench{i*10+j-10}" + ".ini"
                 if os.path.exists(file_path):
-                    colourr = "blue"
                     config.read(file_path)
                     oem_label = config.get('bench', 'oem')
+                    #colourr = "blue"
+                    print("oem label: ------------------------> " + oem_label)
+                    colourr = get_fg_color(oem_label)
+                    back_colourr = get_bg_color(oem_label)
                 else:
                     colourr = "grey"
+                    back_colourr = "white"
                 #button_text = f"bench{i*10+j-10}"
                 button_text = f"bench{i*10+j-10}"
-                button = tk.Button(tab, text=button_text, fg =colourr,
+                button = tk.Button(tab, text=button_text, fg =colourr, bg = back_colourr,
                                    command=lambda text=button_text: self.print_name(text))
                 button.grid(row=j-1, column=0)
     

@@ -54,9 +54,6 @@ class MyCalendar(Calendar):
 # instantiate
 config = ConfigParser()
 
-def quitt():
-    quit()
-
 def get_dates():
     global start_day
     global start_month
@@ -69,36 +66,22 @@ def get_dates():
     input_file = cwd +"\\benches\\bench" + str(parameter) + "\\bench" + str(parameter) + "_period.ini"
 
     if os.path.isfile(input_file):
-        pass        
+        config.read(input_file)
+        start_day   = config.getint('period', 'start_day')
+        start_month = config.getint('period', 'start_month')
+        start_year  = config.getint('period', 'start_year')
+        end_day     = config.getint('period', 'end_day')
+        end_month   = config.getint('period', 'end_month')
+        end_year    = config.getint('period', 'end_year')      
     else:
-        pop = tk.Tk()
-        pop.title("Calendar")
-        pop.geometry("150x100")
-        pop_label = tk.Label(pop, text="NO BOOKED DATES", anchor='w', justify='left')
-        pop_label.grid(row=0, column=0, sticky='w')
-        
-        quit_button = tk.Button(pop, text="OK", command=quitt)
-        quit_button.grid(row=1, column=1)
-        pop.mainloop()
-    
-    config.read(input_file)
+        today = datetime.date.today()
+        start_day   = today.day
+        start_month = today.month
+        start_year  = today.year
+        end_day   = today.day
+        end_month = today.month
+        end_year  = today.year
 
-    #try:
-    start_day   = config.getint('period', 'start_day')
-    start_month = config.getint('period', 'start_month')
-    start_year  = config.getint('period', 'start_year')
-    end_day     = config.getint('period', 'end_day')
-    end_month   = config.getint('period', 'end_month')
-    end_year    = config.getint('period', 'end_year')
-    '''
-    except:
-        start_year=datetime.date.today().year
-        end_year=datetime.date.today().year 
-        start_month=datetime.date.today().month
-        end_month=datetime.date.today().month
-        start_day=datetime.date.today().day
-        end_day=datetime.date.today().day
-    '''
 
 
 def on_change_month(event):

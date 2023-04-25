@@ -43,9 +43,6 @@ class CalendarSelector:
         self.end_date = datetime.datetime.strptime(self.end_cal.get_date(), '%Y-%m-%d').date()
         if self.start_date is None or self.end_date is None:
             return
-
-
-
         # Write the dates to an INI file
         config = ConfigParser()
         folder_name = cwd +"\\benches\\bench" + str(parameter)
@@ -68,6 +65,7 @@ class CalendarSelector:
         # save to a file
         with open(bench_file, 'w') as configfile:
             config.write(configfile)
+        quit()    
 
 root = Tk()
 app = CalendarSelector(root)
