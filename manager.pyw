@@ -212,7 +212,7 @@ def button_remotepc_handler(param):
     if os.path.isfile(filename):
         config.read(filename)
         pc = config.get('bench', 'pc')
-        subprocess.run(["mstsc", "/v:" + pc])
+        subprocess.Popen(["mstsc", "/v:" + pc])
     else:
         pass
 
