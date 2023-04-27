@@ -68,5 +68,6 @@ class CalendarSelector:
         quit()    
 
 root = Tk()
+root.iconbitmap("icons\\Paste.ico")
 app = CalendarSelector(root)
 root.mainloop()

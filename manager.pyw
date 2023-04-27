@@ -45,7 +45,7 @@ def button_edit_handler(param):
         editor = tk.Tk()
         editor.title("Editor")
         editor.geometry("200x120+800+300")
-        editor.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Options.ico")
+        editor.iconbitmap("icons\\Options.ico")
 
         #check if file exists to enter prompt text
         #clear prompts
@@ -110,7 +110,7 @@ def button_view_handler(param):
         viewer = tk.Tk()
         viewer.title("bench" + str(param))
         viewer.geometry("300x150+800+300")
-        viewer.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Find.ico")
+        viewer.iconbitmap("icons\\Find.ico")
 
         pc_label = tk.Label(viewer, text="pc: " + pc, anchor='w', justify='left')
         pc_label.grid(row=0, column=0, sticky='w')
@@ -194,7 +194,7 @@ def button_delete_handler(param):
             print("delete:", param)
             pop = tk.Tk()
             pop.title("Delete")
-            pop.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Delete.ico")
+            pop.iconbitmap("icons\\Delete.ico")
             pop.geometry("100x50+800+300")
             pop_label = tk.Label(pop, text="DELETE BENCH ?", anchor='w', justify='left')
             pop_label.grid(row=0, column=0, sticky='w', columnspan=2) # Set columnspan=2 here
@@ -268,7 +268,7 @@ class App(tk.Tk):
         super().__init__()
         self.title("Benches")
         self.geometry("380x360")
-        self.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Home.ico")
+        self.iconbitmap("icons\\Home.ico")
 
         self.image_edit = Image.open("pics\\edit.png")
         self.photo_edit = ImageTk.PhotoImage(self.image_edit)

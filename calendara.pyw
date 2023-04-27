@@ -120,6 +120,7 @@ def on_date_click(event):
 
 root = Tk()
 root.title("Calendar")
+root.iconbitmap("icons\\Finder.ico")
 cal = MyCalendar(root)
 cal.config(weekendbackground='green', weekendforeground='white')
 

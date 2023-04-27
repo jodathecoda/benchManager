@@ -17,7 +17,7 @@ cwd = os.getcwd()
 root = tk.Tk()
 root.title("Editor")
 root.geometry("200x120")
-root.iconbitmap("ico\\32bit\\Hot\\24x24-32b\\Options.ico")
+root.iconbitmap("icons\\Options.ico")
 
 image_bg = Image.open("flags\\bg.png")
 photo_bg = ImageTk.PhotoImage(image_bg)
