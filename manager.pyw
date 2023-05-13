@@ -337,6 +337,12 @@ class App(tk.Tk):
                     back_colourr = "white"
                 #button_text = f"bench{i*10+j-10}"
                 button_text = f"bench{i*10+j-10}"
+                if button_text == "bench1":
+                    button_text = "emcch1"
+                if button_text == "bench2":
+                    button_text = "emcch2"
+                if button_text == "bench3":
+                    button_text = "emcch3"
                 button = tk.Button(tab, text=button_text, fg =colourr, bg = back_colourr,
                                    command=lambda text=button_text: self.print_name(text))
                 button.grid(row=j-1, column=0)
