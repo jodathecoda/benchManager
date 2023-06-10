@@ -1,0 +1,13 @@
+<Resources>
+  <GVar Name="SoundLib">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_SoundLib\Acoustic_A.jpg</GVar>
+  <GVar Name="StartVoltageCurves">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_StartVoltageCurves\Voltage_Curve_Player_Documentation.docx</GVar>
+  <GVar Name="TextResources_v0.10">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_TextResources_v0.10\Arabic_HTM0.30E_AU336-ZPM001_BL7.210_V0.10E.xml</GVar>
+  <GVar Name="TextResources_v0.35">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_TextResources_v0.35\Arabic_HTM0.35E_AU336-ZPM003-BL7.238_V0.35E(64388).xml</GVar>
+  <GVar Name="VisionPatterns">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_VisionPatterns\E33B_EPB_Text_green.png</GVar>
+  <GVar Name="ZPM_Files">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_ZPM_Files\ZPM_Audi.xlsx</GVar>
+  <GVar Name="AnimationPath">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\AnimationDef.xls</GVar>
+  <GVar Name="MultyCheckObjPath">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\HMI_Definition.xlsx</GVar>
+  <GVar Name="PID_Definitons">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\PID_Definitions.xlsx</GVar>
+  <GVar Name="DevIDs">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\_DevIDs\DevIds.xlsx</GVar>
+  <GVar Name="DTCDefinitionList">C:\PROVEtech_Cfg\Audi_Clusters\Audi_Clusters_Panorama\Inc2\4518.2324\DTCDefinitionList.xlsx</GVar>
+</Resources>

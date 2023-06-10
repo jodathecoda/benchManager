@@ -1,0 +1,1299 @@
+<Execution>
+  <Light_Mode>Yes</Light_Mode>
+  <SilentStart>No</SilentStart>
+  <CurrentPN>C_HUD_9BXX_V01.01</CurrentPN>
+  <CurrentNVM>2.08</CurrentNVM>
+  <CurrentSample>124124</CurrentSample>
+  <TC_Status_MustInclude>1_Design_OR_2_DesignReview_OR_3_Implementation_OR_4_ImplementationReview_OR_5_AutomationDebug_OR_6_Released</TC_Status_MustInclude>
+  <TC_Status_MustExclude>
+  </TC_Status_MustExclude>
+  <TC_Automation_MustInclude>
+  </TC_Automation_MustInclude>
+  <TC_Automation_MustExclude>
+  </TC_Automation_MustExclude>
+  <TC_Type_MustInclude>
+  </TC_Type_MustInclude>
+  <TC_Type_MustExclude>
+  </TC_Type_MustExclude>
+  <TC_Category_MustInclude>
+  </TC_Category_MustInclude>
+  <TC_Category_MustExclude>
+  </TC_Category_MustExclude>
+  <TC_StatusList>
+    <TC_Status>0_Draft</TC_Status>
+    <TC_Status>1_Design</TC_Status>
+    <TC_Status>2_DesignReview</TC_Status>
+    <TC_Status>3_Implementation</TC_Status>
+    <TC_Status>4_ImplementationReview</TC_Status>
+    <TC_Status>5_AutomationDebug</TC_Status>
+    <TC_Status>6_Released</TC_Status>
+    <TC_Status>7_Dropped</TC_Status>
+  </TC_StatusList>
+  <TC_AutomationList>
+    <TC_Automation aStatus="1">00_Automated</TC_Automation>
+    <TC_Automation aStatus="1">01_CAN_BUS</TC_Automation>
+    <TC_Automation aStatus="1">02_RelBox</TC_Automation>
+    <TC_Automation aStatus="1">03_PSP2010</TC_Automation>
+    <TC_Automation aStatus="1">04_NIDAQ</TC_Automation>
+    <TC_Automation aStatus="1">10_NIVBAI</TC_Automation>
+  </TC_AutomationList>
+  <TC_TypeList>
+    <TC_Type>Configuration</TC_Type>
+    <TC_Type>Data_Integrity</TC_Type>
+    <TC_Type>Failover_Recovery</TC_Type>
+    <TC_Type>Functional</TC_Type>
+    <TC_Type>Installation</TC_Type>
+    <TC_Type>Load</TC_Type>
+    <TC_Type>Long_Term</TC_Type>
+    <TC_Type>Performance</TC_Type>
+    <TC_Type>Security_Data_Access</TC_Type>
+    <TC_Type>Stress</TC_Type>
+    <TC_Type>User_Interface</TC_Type>
+  </TC_TypeList>
+  <TC_CategoryList>
+    <TC_Category>Confidence</TC_Category>
+    <TC_Category>Customer_Scenarious</TC_Category>
+    <TC_Category>Defect_CUS</TC_Category>
+    <TC_Category>Defect_INT</TC_Category>
+    <TC_Category>Diagnostic_Impact</TC_Category>
+    <TC_Category>Driving</TC_Category>
+    <TC_Category>Feature_Interaction</TC_Category>
+    <TC_Category>Model_Based</TC_Category>
+    <TC_Category>Monkey</TC_Category>
+    <TC_Category>Robustness</TC_Category>
+    <TC_Category>Safety</TC_Category>
+  </TC_CategoryList>
+  <PartNumberList>
+    <PartNumber name="CHUD_MY19_DUMMY">
+      <SW_Release>DUMMY</SW_Release>
+      <Date_Released>19/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.20">
+      <SW_Release>01000020</SW_Release>
+      <Date_Released>21/11/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.21">
+      <SW_Release>01010021</SW_Release>
+      <Date_Released>31/01/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.00">
+      <SW_Release>01020000</SW_Release>
+      <Date_Released>06/03/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.10">
+      <SW_Release>01000010</SW_Release>
+      <Date_Released>07/10/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;TC_DESIGN_REPORT;124124;SW_Q_BOARD;213</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="PV KMH GASOLINE">213</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.21">
+      <SW_Release>01000021</SW_Release>
+      <Date_Released>21/11/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.00">
+      <SW_Release>01010000</SW_Release>
+      <Date_Released>13/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.22">
+      <SW_Release>01000022</SW_Release>
+      <Date_Released>02/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.01">
+      <SW_Release>01010001</SW_Release>
+      <Date_Released>19/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.02">
+      <SW_Release>01020002</SW_Release>
+      <Date_Released>03/04/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.05.05">
+      <SW_Release>01050005</SW_Release>
+      <Date_Released>08/12/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.23">
+      <SW_Release>01000023</SW_Release>
+      <Date_Released>08/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.02">
+      <SW_Release>01010002</SW_Release>
+      <Date_Released>22/12/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.03">
+      <SW_Release>01020003</SW_Release>
+      <Date_Released>10/04/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.25">
+      <SW_Release>01020025</SW_Release>
+      <Date_Released>19/06/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.04.05">
+      <SW_Release>01040005</SW_Release>
+      <Date_Released>04/10/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.99.01">
+      <SW_Release>01990001</SW_Release>
+      <Date_Released>24/08/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="REPRODUCE_CUS.003_01.02.04">
+      <SW_Release>01020004</SW_Release>
+      <Date_Released>11/04/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.25">
+      <SW_Release>01010025</SW_Release>
+      <Date_Released>16/02/2017 00:00:00</Date_Released>
+      <List_NVM>9,99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.04">
+      <SW_Release>01020004</SW_Release>
+      <Date_Released>11/04/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.15">
+      <SW_Release>01020015</SW_Release>
+      <Date_Released>10/05/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.03.05">
+      <SW_Release>01030005</SW_Release>
+      <Date_Released>01/08/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.26">
+      <SW_Release>01010026</SW_Release>
+      <Date_Released>16/02/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.19.00">
+      <SW_Release>021900</SW_Release>
+      <Date_Released>28/07/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.00.15">
+      <SW_Release>01000015</SW_Release>
+      <Date_Released>01/11/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.18.00">
+      <SW_Release>021800</SW_Release>
+      <Date_Released>28/07/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.16.00">
+      <SW_Release>021600</SW_Release>
+      <Date_Released>28/07/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_Sprint11">
+      <SW_Release>01000000</SW_Release>
+      <Date_Released>30/08/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;TC_DESIGN_REPORT;124124;SW_Q_BOARD;213</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="PV KMH GASOLINE">213</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="PV MPH GASOLINE">1561</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.30">
+      <SW_Release>01070030</SW_Release>
+      <Date_Released>08/08/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.15.00">
+      <SW_Release>021500</SW_Release>
+      <Date_Released>05/04/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_Sprint12">
+      <SW_Release>01000005</SW_Release>
+      <Date_Released>19/09/2016 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;TC_DESIGN_REPORT;124124;SW_Q_BOARD;213</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="PV KMH GASOLINE">213</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.20">
+      <SW_Release>01070020</SW_Release>
+      <Date_Released>18/06/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.09.00">
+      <SW_Release>01090000</SW_Release>
+      <Date_Released>04/02/2019 23:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.08.00">
+      <SW_Release>01080000</SW_Release>
+      <Date_Released>23/10/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.13.00">
+      <SW_Release>021300</SW_Release>
+      <Date_Released>22/03/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.24.00">
+      <SW_Release>022400</SW_Release>
+      <Date_Released>05/02/2019 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.00">
+      <SW_Release>01070000</SW_Release>
+      <Date_Released>23/03/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.05.10">
+      <SW_Release>01050010</SW_Release>
+      <Date_Released>03/01/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.06.00">
+      <SW_Release>01060000</SW_Release>
+      <Date_Released>22/01/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.01">
+      <SW_Release>01070001</SW_Release>
+      <Date_Released>05/04/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.45">
+      <SW_Release>01070045</SW_Release>
+      <Date_Released>23/10/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.08.02">
+      <SW_Release>01080002</SW_Release>
+      <Date_Released>12/11/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="C_HUD_9BXX_V01.01">
+      <SW_Release>C_HUD_9BXX_V01.01.01</SW_Release>
+      <Date_Released>02/02/2016 00:00:00</Date_Released>
+      <List_NVM>2.08</List_NVM>
+      <List_Sample>;1561;TC_DESIGN_REPORT;124124;213</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="PV KMH GASOLINE">213</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="PV MPH GASOLINE">1561</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.22.00">
+      <SW_Release>022200</SW_Release>
+      <Date_Released>23/10/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.04.10">
+      <SW_Release>01040010</SW_Release>
+      <Date_Released>25/10/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.05.00">
+      <SW_Release>01050000</SW_Release>
+      <Date_Released>10/11/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.06.01">
+      <SW_Release>01060001</SW_Release>
+      <Date_Released>26/01/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.35">
+      <SW_Release>01070035</SW_Release>
+      <Date_Released>24/08/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.20">
+      <SW_Release>01020020</SW_Release>
+      <Date_Released>31/05/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.03.10">
+      <SW_Release>01030010</SW_Release>
+      <Date_Released>24/08/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.04.00">
+      <SW_Release>01040000</SW_Release>
+      <Date_Released>08/09/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.06.02">
+      <SW_Release>01060002</SW_Release>
+      <Date_Released>19/02/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.25">
+      <SW_Release>01070025</SW_Release>
+      <Date_Released>09/07/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MEET_v02.20.00">
+      <SW_Release>022000</SW_Release>
+      <Date_Released>24/08/2018 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.01.20">
+      <SW_Release>01010020</SW_Release>
+      <Date_Released>23/01/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.02.10">
+      <SW_Release>01020010</SW_Release>
+      <Date_Released>19/04/2017 00:00:00</Date_Released>
+      <List_NVM>9.99</List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.03.00">
+      <SW_Release>01030000</SW_Release>
+      <Date_Released>07/07/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.04.01">
+      <SW_Release>01040001</SW_Release>
+      <Date_Released>14/09/2017 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.07.15">
+      <SW_Release>01070015</SW_Release>
+      <Date_Released>05/04/2018 00:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+    <PartNumber name="CHUD_MY19_V01.08.05">
+      <SW_Release>01080005</SW_Release>
+      <Date_Released>07/01/2019 07:00:00</Date_Released>
+      <List_NVM>
+      </List_NVM>
+      <List_Sample>;17001810;17001811;17001817;17001832;17001833;ED RUN 1A;ED RUN1;TC_DESIGN_REPORT;LS17248017004049;LS17248017004058;LS17248017004065;1711200004061;124124;SW_Q_BOARD</List_Sample>
+      <ProductVariant>C_HUD_9BXX</ProductVariant>
+      <Samples>
+        <Sample SN="2469487" HWPartNumber="7782619-03" DeliveryDate="" Description="PV MPH DIESEL">124124</Sample>
+        <Sample SN="Q23025" HWPartNumber="140487" DeliveryDate="" Description="ED RUN 1A">ED RUN 1A</Sample>
+        <Sample SN="17001810" HWPartNumber="17001810" DeliveryDate="" Description="DV RUN2">17001810</Sample>
+        <Sample SN="17001832" HWPartNumber="17001832" DeliveryDate="" Description="DV RUN2">17001832</Sample>
+        <Sample SN="999999" HWPartNumber="999999999" DeliveryDate="" Description="TC_DESIGN_REPORT">TC_DESIGN_REPORT</Sample>
+        <Sample SN="17001811" HWPartNumber="17001811" DeliveryDate="" Description="DV RUN2">17001811</Sample>
+        <Sample SN="17001833" HWPartNumber="17001833" DeliveryDate="" Description="DV RUN2">17001833</Sample>
+        <Sample SN="2469487" HWPartNumber="2662219-03" DeliveryDate="" Description="ED RUN1">ED RUN1</Sample>
+        <Sample SN="17001817" HWPartNumber="17001817" DeliveryDate="" Description="DV RUN2">17001817</Sample>
+        <Sample SN="LS17248017004065" HWPartNumber="LS17248017004065" DeliveryDate="" Description="DV RUN2">LS17248017004065</Sample>
+        <Sample SN="2469487" HWPartNumber="2682619-03" DeliveryDate="" Description="SW_Q_BOARD">SW_Q_BOARD</Sample>
+        <Sample SN="LS17248017004058" HWPartNumber="LS17248017004058" DeliveryDate="" Description="DV RUN2">LS17248017004058</Sample>
+        <Sample SN="1711200004061" HWPartNumber="1711200004061" DeliveryDate="" Description="CA">1711200004061</Sample>
+        <Sample SN="LS17248017004049" HWPartNumber="LS17248017004049" DeliveryDate="" Description="DV RUN2">LS17248017004049</Sample>
+      </Samples>
+    </PartNumber>
+  </PartNumberList>
+  <Profile_List>
+    <DateModified>8/16/2016 9:43:00 AM</DateModified>
+  </Profile_List>
+  <Profile_Cfg>
+    <NewProfile_Name>
+    </NewProfile_Name>
+    <Save_Only>False</Save_Only>
+    <Selected_Profiles>
+    </Selected_Profiles>
+    <StoreFixedVersion>False</StoreFixedVersion>
+  </Profile_Cfg>
+  <TC_Req_MustInclude>
+  </TC_Req_MustInclude>
+  <TC_Issue_MustInclude>
+  </TC_Issue_MustInclude>
+  <TC_Func_MustInclude>
+  </TC_Func_MustInclude>
+  <TC_Feat_MustInclude>
+  </TC_Feat_MustInclude>
+  <Special_Actions>
+    <Generate_SVD_Only>False</Generate_SVD_Only>
+    <Skip_Repetition>False</Skip_Repetition>
+    <SVPR_Mode />
+  </Special_Actions>
+  <Setup>
+    <UseFileServer>True</UseFileServer>
+    <ExportLocalResults />
+  </Setup>
+  <HTTP_Result>
+  </HTTP_Result>
+</Execution>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>1</DebugLevel>
+  <Package>
+    <Path> . </Path>
+    <Name> RCVector.dll </Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericDevice.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGeneric.dll</Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCCAN.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCModelCom.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCEventSource.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCDisassembly.dll </Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <EventSource>
+    <Name>ModelClock10ms</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Attribute>
+        <TimerPeriod_ms>10</TimerPeriod_ms>
+      </Attribute>
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>Idle</Name>
+    <Class>RC_CIdle</Class>
+    <Config />
+  </EventSource>
+  <EventSource>
+    <Name> SysClock </Name>
+    <Class> RC_CSysClock </Class>
+    <!-- Player specific configuration -->
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 10 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <Device>
+    <Name> Vector </Name>
+    <Class> RC_CXLDevice </Class>
+    <!-- Device specific configuration -->
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>CANB</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <!--controller number, interface number-->
+          <IsExtendedID>Mixed</IsExtendedID>
+          <HWPort>VN1630 Channel 4</HWPort>
+          <BitRate>250000</BitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\213_MOPF_HMI_HU_CAN_2020_05a\213_238_MOPF_HEADUNIT_CAN_2019_05a.arxml</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\213_MOPF_HMI_HU_CAN_2020_05a\213_238_MOPF_HEADUNIT_CAN_2019_05a.xml</RBSDescriptor>
+          <UpdateBitAsSignal>true</UpdateBitAsSignal>
+        </Config>
+      </Port>
+      <Port>
+        <Name>CANC</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <!--controller number, interface number-->
+          <IsExtendedID>Mixed</IsExtendedID>
+          <HWPort>VN1630 Channel 3</HWPort>
+          <BitRate>666666</BitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\213_MOPF_HMI_HU_CAN_2020_05a\213_238_257CY20_HMI2_CAN_STAR_2_3_V2_2020_MOPF_2020_05a.arxml</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\213_MOPF_HMI_HU_CAN_2020_05a\213_238_257CY20_HMI2_CAN_STAR_2_3_V2_2020_MOPF_2020_05a.xml</RBSDescriptor>
+          <UpdateBitAsSignal>true</UpdateBitAsSignal>
+        </Config>
+      </Port>
+    </Config>
+  </Device>
+  <!--ENTER <Device>..........</Device> HERE-->
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANB</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANB</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANC</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANC</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>PowerSupply</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <!--in seconds-->
+      <tick>0.01</tick>
+      <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\PowerSupply_COM_GenApp\PowerSupply_COM_GenApp.dll</ExternalApplication>
+      <!--ExternalApplicationInfo is an optional Tag. This string is directly passed to the application-->
+      <!--For example, to specify a app specific config information-->
+      <ExternalApplicationInfo>COM10;CH_1-&gt;[I=5][V=13.5][OVP=21][OCP=9.53][ErrTimeout_s=60][Out=1];CH_2-&gt;[I=5][V=13.5][OVP=21][OCP=9.53][ErrTimeout_s=60][Out=1];</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Model</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SQC\SQC.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SQC\SQC.dll</ModelDll>
+      <RootNodeName>SQC</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>IF1</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <tick>0.01</tick>
+      <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\GenericAppSocket\GenericAppSocket.dll</ExternalApplication>
+      <ExternalApplicationInfo>169.254.125.200:50000;IF1;</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>HazardLights</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>HazardLights</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>DUT_State_Monitor</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\DUT_State_Monitor\DUT_State_Monitor.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\DUT_State_Monitor\DUT_State_Monitor.dll</ModelDll>
+      <RootNodeName>DUT_State_Monitor</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>TripComputer1</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.dll</ModelDll>
+      <RootNodeName>TC_Fuel.Type1</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>TripComputer2</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.dll</ModelDll>
+      <RootNodeName>TC_Fuel.Type2</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>FuelLvl</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>FuelLvl</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Speedometer</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>Speedometer</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Tachometer</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>Tachometer</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Clock</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config />
+    <Config>
+      <ExternalApplicationInfo>
+      </ExternalApplicationInfo>
+      <RootNodeName>Clock</RootNodeName>
+      <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\Clock\Clock.dll</ExternalApplication>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>SelectedGear</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>SelectedGear</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Model_OFN1</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\OFN_GuestGen\OFN_GuestGen.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\OFN_GuestGen\OFN_GuestGen.dll</ModelDll>
+      <RootNodeName>Gesture_GEN.OFN1</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Model_OFN2</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\OFN_GuestGen\OFN_GuestGen.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\OFN_GuestGen\OFN_GuestGen.dll</ModelDll>
+      <RootNodeName>Gesture_GEN.OFN2</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Model_TPAD</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\TPAD_GestGen\TPAD_GestGen.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\TPAD_GestGen\TPAD_GestGen.dll</ModelDll>
+      <RootNodeName>Gesture_GEN.TPAD</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>VIN</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\VIN_MFA2\VIN_MFA2.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\VIN_MFA2\VIN_MFA2.dll</ModelDll>
+      <RootNodeName>VIN</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CurrentGear</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>CurrentGear</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Type32_RE_VN1630_2CHs_GenAppPS_1Way_ReadWrite</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\CopySignalOnChange_GenApp\CopySignalOnChange_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>C:\PROVEtech_Cfg\DAG_IC_MFA\DAG_IC_MFA2\Iteration_E019\2218.3399\Type32_RE_VN1630_2CHs_GenAppPS.1Way_ReadWrite.txt</ExternalApplicationInfo>
+      <HideName>yes</HideName>
+    </Config>
+  </Peer>
+  <SignalConnectionFile>C:\PROVEtech_Cfg\DAG_IC_MFA\DAG_IC_MFA2\Iteration_E019\2218.3399\Type32_RE_VN1630_2CHs_GenAppPS.2Way_Write_.txt</SignalConnectionFile>
+</RCConfiguration>

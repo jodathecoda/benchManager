@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>1</DebugLevel>
+  <Package>
+    <Name> RCVector.dll </Name>
+  </Package>
+  <Package>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <Package>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+  <Package>
+    <Name> RCCAN.dll </Name>
+  </Package>
+  <Package>
+    <Name> RCModelCom.dll </Name>
+  </Package>
+  <Package>
+    <Name> RCEventSource.dll </Name>
+  </Package>
+  <Package>
+    <Name> RCDisassembly.dll </Name>
+  </Package>
+  <Package>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <EventSource>
+    <!-- Name of the player -->
+    <Name> Idle </Name>
+    <!--Name of the Class to be used to create the player-->
+    <Class> RC_CIdle </Class>
+    <Config />
+  </EventSource>
+  <EventSource>
+    <Name> SysClock </Name>
+    <Class> RC_CSysClock </Class>
+    <!-- Player specific configuration -->
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 10 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <!-- END of NIMIO example-->
+  <Device>
+    <Name> Vector </Name>
+    <Class> RC_CXLDevice </Class>
+    <!-- Device specific configuration -->
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>FA_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <!--controller number, interface number-->
+          <IsExtendedID>No</IsExtendedID>
+          <HWPort>Virtual Channel 1</HWPort>
+          <BitRate>500000</BitRate>
+          <AckBit>1</AckBit>
+          <NWDescriptor>C:\PROVEtech_Cfg\BMW_Clusters\_BusSignalDef\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal.arxml</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\BMW_Clusters\_BusSignalDef\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal.xml</RBSDescriptor>
+        </Config>
+      </Port>
+      <Port>
+        <Name>2FA_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <!--controller number, interface number-->
+          <IsExtendedID>No</IsExtendedID>
+          <HWPort>Virtual Channel 2</HWPort>
+          <BitRate>500000</BitRate>
+          <AckBit>1</AckBit>
+          <NWDescriptor>C:\PROVEtech_Cfg\BMW_Clusters\_BusSignalDef\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal.arxml</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\BMW_Clusters\_BusSignalDef\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal.xml</RBSDescriptor>
+        </Config>
+      </Port>
+      <!--controller number, interface number-->
+    </Config>
+  </Device>
+  <!--ENTER <Device>..........</Device> HERE-->
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>FA_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>FA_CAN</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>2FA_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>2FA_CAN</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>FA_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>FA_CAN</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>2FA_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>2FA_CAN</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>SetTankLitters</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>SetTankLitters</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>OdoCount</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>OdoCount</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Energy2Count</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>Energy2Count</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Energy1Count</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>Energy1Count</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>ConsumptionCount</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>ConsumptionCount</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Energy0Count</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>Energy0Count</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Type_UserPc_VirtualCan_1Way_ReadWrite</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\CopySignalOnChange_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>C:\PROVEtech_Cfg\BMW_Clusters\_BenchTypes_Templates\Type_UserPc_VirtualCan\ARXML411_SP2018_19KW20_V45_FA_CAN_V80_lokal_1Way_ReadWrite.txt</ExternalApplicationInfo>
+      <HideName>yes</HideName>
+    </Config>
+  </Peer>
+</RCConfiguration>

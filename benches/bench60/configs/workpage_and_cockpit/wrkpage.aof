@@ -1,0 +1,14 @@
+[Allgemein]
+Version=4
+LeftSide=0
+Signals=
+[Page1]
+SCROLLPOS=0|0
+COLOR=8C4600
+MSG=XPos:2;YPos:1;XSize:17;YSize:15;Split:0.5;Delta:1;Width1:90|90|90|30|70|150|40|200|70|300|100;Width2:170|100|135|280;Order1:1|2|3|4|5|10|6|7|8|9;Order2:1|2|3;Channel:Device1.CAN_BD;Sub:1|3;Sub:EF|3;Sub:F0|3;Sub:0|3;Sub:2|3
+ANALOGCONTROL=Sig:Device1.CAN_BD_Tx.bench.ID_VMF_DSGN.CMPT_NAV_MENU_CMB;XPos:2;YPos:16;XSize:11;YSize:2;Shortname:1;FarbeSchiebereglerUeberMarke:255;FarbeSchiebereglerUnterMarke:13000;Marke:-128;Min:-128;Max:127;AxenBeschriftung:2;Einheit:;FarbeAktiveAn:255;FarbeAktiveAus:12632256;AusrichtungName:1;AusrichtungEinheit:1;AusrichtungWert:1;AusrichtungSchieberegler:2;AusrichtungAktive:1;NachKommaStellen:0;SchrittweiteGross:5;SchrittweiteKlein:1;SigTextTable:1
+ANALOGCONTROL=Sig:Device1.CAN_BD_Tx.bench.ID_COMMANDES_BSI.LUMINOSITE;XPos:2;YPos:18;XSize:11;YSize:2;Shortname:1;FarbeSchiebereglerUeberMarke:255;FarbeSchiebereglerUnterMarke:13000;Marke:0;Min:0;Max:15;AxenBeschriftung:2;Einheit:;FarbeAktiveAn:255;FarbeAktiveAus:12632256;AusrichtungName:1;AusrichtungEinheit:1;AusrichtungWert:1;AusrichtungSchieberegler:2;AusrichtungAktive:1;NachKommaStellen:0;SchrittweiteGross:5;SchrittweiteKlein:1;SigTextTable:1
+TACHO_CONTROL=Sig:Device1.CAN_BD_Tx.bench.ID_DONNEES_BSI_RAPIDES.VITV;XPos:2;YPos:20;XSize:8;YSize:12;Shortname:1;NameOn:1;MinorTickOn:1;Step:65.533999999999991815;Min:0;Max:655.33999999999980446;StartAngle:2.356194490192344837;EndAngle:0.785398163397448279;ScalaText:1;Knob:1;ColorPointer:38655
+[Page2]
+SCROLLPOS=0|0
+COLOR=8C4600

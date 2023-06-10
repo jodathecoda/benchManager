@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>0</DebugLevel>
+  <Package>
+    <Path>.</Path>
+    <Name>RCVector.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCCAN.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModelCom.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCEventSource.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCDisassembly.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCLDFDisassembly.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+  <EventSource>
+    <!--Name of the player-->
+    <Name>Idle</Name>
+    <!--Name of the Class to be used to create the player-->
+    <Class>RC_CIdle</Class>
+    <Config>
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>SysClock</Name>
+    <Class>RC_CSysClock</Class>
+    <!--Player specific configuration-->
+    <Config>
+      <Interface>
+      </Interface>
+      <Attribute>
+        <TimerPeriod_ms>10</TimerPeriod_ms>
+      </Attribute>
+      <Signal>
+      </Signal>
+      <Datagram>
+      </Datagram>
+      <Player>
+      </Player>
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>SysClock100ms</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms>100</TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>SysClock50ms</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms>50</TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>SysClock_DMM</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms>100</TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+		<Name>SysClock_200ms</Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	<EventSource>
+    <Name>SysClock_PS</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms>200</TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  
+  <!--ENTER <Device>..........</Device> HERE-->
+  
+ <Device>
+    <Name>Vector</Name>
+    <Class>RC_CXLDevice</Class>
+    <!--Device specific configuration-->
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>MIBCAN</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 1,0,0</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>MIBCAN_2</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 2,0,1</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>MIBCAN_3</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 3,0,2</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>MIBCAN_4</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 5,0,4</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>MIBCAN_5</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 6,0,5</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>MIBCAN_6</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 7,0,6</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.dbc</NWDescriptor>
+          <Cluster>ABT_1_MIB_ab_Gen3</Cluster>
+          <BitRate>500000</BitRate>
+          <BusType>CAN</BusType>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_MIBCAN_KMatrix_V14.07F_20220331_mod1.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  
+	  <Port>
+        <Name>K3CANFD</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 1,1,0</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>		  
+        </Config>
+      </Port>
+	  <Port>
+        <Name>K3CANFD_2</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 2,1,1</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>K3CANFD_3</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 3,1,2</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>K3CANFD_4</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 5,1,4</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>K3CANFD_5</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 6,1,5</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>K3CANFD_6</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <HWPort>VN7572 Channel 7,1,6</HWPort>
+          <NWDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.dbc</NWDescriptor>
+          <DataBitRate>1000000</DataBitRate>
+          <Cluster>Kombi</Cluster>
+          <SamplePoint>70</SamplePoint>
+          <BitRate>500000</BitRate>
+          <DataSamplePoint>70</DataSamplePoint>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Audi_Clusters\_BusSignalDef\K3CANFD_KMatrix_V14.07F_MIBCAN_KMatrix_V14.07F\MQBw_Baseline_K3CANFD_KMatrix_V14.07F_20220330_MB.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  
+	</Config>
+ </Device>
+
+<Device>
+	<Name>Advantech_USB_Modules</Name>
+	<Class>RC_CGenericDevice</Class>
+	<Config>
+		<clock_src>SysClock</clock_src>
+		<ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice> 
+		<Port>
+			  <Name>RACK_1_Card01_Card_02_Relay</Name>
+			  <Class>RC_CDigitalOutPort</Class>
+			  <Config>
+				  <DeviceID>PCI-1751Rack1,BID#1</DeviceID>
+				<Width>bool</Width>
+				
+				<!-- Device power supply DUT1 -->
+				<SignalSrc>
+					<Name>Device1.PowerSupply</Name>
+					<HWSignalSource>3/1/0</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 3 and line : 0</Description>
+				</SignalSrc>			
+				<SignalSrc>
+					<Name>Device1.ParkBreak</Name>
+					<HWSignalSource>3/1/1</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 3 and line : 1</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device1.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>3/1/2</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 3 And Line : 2</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device1.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>3/1/3</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 3 And Line : 3</Description>
+				</SignalSrc>
+				
+				<SignalSrc>
+					<Name>Device2.PowerSupply</Name>
+					<HWSignalSource>3/1/4</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 3 and line : 4</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device2.ParkBreak</Name>
+					<HWSignalSource>3/1/5</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 3 and line : 5</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device2.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>3/1/6</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 3 And Line : 6</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device2.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>3/1/7</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 3 And Line : 7</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device3.PowerSupply</Name>
+					<HWSignalSource>4/1/0</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 4 and line : 0</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device3.ParkBreak</Name>
+					<HWSignalSource>4/1/1</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 4 and line : 1</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device3.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>4/1/2</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device3.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>4/1/3</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 3</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device4.PowerSupply</Name>
+					<HWSignalSource>4/1/4</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 4 and line : 0</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device4.ParkBreak</Name>
+					<HWSignalSource>4/1/5</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 4 and line : 1</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device4.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>4/1/6</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device4.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>4/1/7</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 3</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device5.PowerSupply</Name>
+					<HWSignalSource>5/1/0</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 4 and line : 0</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device5.ParkBreak</Name>
+					<HWSignalSource>5/1/1</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 4 and line : 1</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device5.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>5/1/2</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device5.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>5/1/3</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 3</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device6.PowerSupply</Name>
+					<HWSignalSource>5/1/4</HWSignalSource>	      
+					<Description>Card01 DO bool(Out) Port : 4 and line : 0</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device6.ParkBreak</Name>
+					<HWSignalSource>5/1/5</HWSignalSource>	      
+					<Description>Card02 DO bool(Out) Port : 4 and line : 1</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device6.FUEL_RESISTOR_1</Name>
+					<HWSignalSource>5/1/6</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Device6.FUEL_RESISTOR_2</Name>
+					<HWSignalSource>5/1/7</HWSignalSource>
+					<Description>Card01 DO bool(Out) Port : 4 And Line : 3</Description>
+				</SignalSrc>
+			</Config>
+		</Port>
+	  
+		<Port>
+			<Name>Rack2_In</Name>
+			<Class>RC_CDigitalInPort</Class>
+			<Config>
+				  <DeviceID>PCI-1751Rack1,BID#1</DeviceID>
+				<Width>uint8</Width>
+				<SignalSrc>
+					<Name>Clim_Room_SW</Name>
+					<HWSignalSource>0/1/5:7</HWSignalSource>
+					<Description>Card02 Do bool(Out) Port : 0 And Line : 4 to 6</Description>
+				</SignalSrc>
+				<SignalSrc>
+					<Name>Sleep_mode</Name>
+					<HWSignalSource>1/1/7:7</HWSignalSource>
+					<Description>Card02 Do bool(Out) Port : 0 And Line : 7</Description>
+				</SignalSrc>
+			</Config>
+		</Port>	
+		
+<!-- *********************************************************************************************************************-->
+<!--      										         Sw current														  -->
+<!-- *********************************************************************************************************************-->
+			  <Port>
+				<Name>Current_SW_Box</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+				  <DeviceID>SWCURRENT</DeviceID>
+				  <Width>bool</Width>
+				  
+				  <!-- SW_CURRENT supply DUTs -->
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_1</Name>
+					<HWSignalSource>0/1/0</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_2</Name>
+					<HWSignalSource>0/1/1</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_3</Name>
+					<HWSignalSource>0/1/2</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_4</Name>
+					<HWSignalSource>0/1/3</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_5</Name>
+					<HWSignalSource>0/1/4</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_CURRENT_6</Name>
+					<HWSignalSource>0/1/5</HWSignalSource>
+					<Description>DO Port  0 and Line 0</Description>
+				  </SignalSrc>
+				  <!-- SW_SENSE supply DUT1 -->
+				  <SignalSrc>
+					<Name>Current.SW_PwrSupply_1</Name>
+					<HWSignalSource>1/1/4</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_PwrSupply_2</Name>
+					<HWSignalSource>1/1/5</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>	
+				   <SignalSrc>
+					<Name>Current.SW_PwrSupply_3</Name>
+					<HWSignalSource>1/1/6</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_PwrSupply_4</Name>
+					<HWSignalSource>1/1/7</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>
+				  <SignalSrc>
+					<Name>Current.SW_PwrSupply_5</Name>
+					<HWSignalSource>2/1/0</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>	
+				   <SignalSrc>
+					<Name>Current.SW_PwrSupply_6</Name>
+					<HWSignalSource>2/1/1</HWSignalSource>
+					<Description>DO Port  4 and Line 1</Description>
+				  </SignalSrc>
+				</Config>
+			  </Port> 
+		</Config>
+	</Device>
+	
+	<Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  
+   <Peer>
+    <Name>K3CANFD</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>K3CANFD</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_2_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD_2</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+   <Peer>
+    <Name>K3CANFD_3</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>K3CANFD_3</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_3_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD_3</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer> 
+  <Peer>
+    <Name>K3CANFD_4</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>K3CANFD_4</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_4_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD_4</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_5</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>K3CANFD_5</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_5_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD_5</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_6</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>K3CANFD_6</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>K3CANFD_6_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <ChangeBaudRateFD>true</ChangeBaudRateFD>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>K3CANFD_6</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  
+  <Peer>
+    <Name>MIBCAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+   <Peer>
+    <Name>MIBCAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_2</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN_2</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_2_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN_2</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+ <Peer>
+    <Name>MIBCAN_3</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN_3</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_3_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN_3</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer> 
+  <Peer>
+    <Name>MIBCAN_4</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN_4</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_4_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN_4</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_5</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN_5</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_5_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN_5</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_6</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>MIBCAN_6</Port>
+      <EnableBusLoad>true</EnableBusLoad>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>MIBCAN_6_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <ChangeBaudRate>true</ChangeBaudRate>
+      <Port>MIBCAN_6</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <UseLoadDistribution>Yes</UseLoadDistribution>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  
+  <!--**************************************************************************
+                                       DMM
+  ***********************************************************************************-->
+   
+  
+  <Peer> 
+    <Name>Probe</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_200ms</clock_src>
+	  <HideName>NO</HideName> 
+      <tick>0.1</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+	  <ExternalApplicationInfo>127.0.0.1::11001</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+  <Peer>
+	<Name>Current</Name>
+	<Class>RC_CGenericApplication</Class>
+	<Config>
+	<clock_src>SysClock50ms</clock_src>
+	<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\DebugVariables.dll</ExternalApplication>
+	<!-- Default Value DLL ** ExternalApplicationInfo: DataType ; Number of data ; Name_1 ; ... ; Name_X ** DataType = 0 -> Int8 DataType = 1 -> UInt8 DataType = 2 -> Int16 DataType = 3 -> UInt16 DataType = 4 -> Int32 DataType = 5 -> UInt32 DataType = 6 -> Int64 DataType = 7 -> UInt64 DataType = 8 -> Float DataType = 9 -> Double DataType > 10 -> Error XML -->
+	<ExternalApplicationInfo>9;6;CHAN1;CHAN2;CHAN3;CHAN4;CHAN5;CHAN6</ExternalApplicationInfo>
+	</Config>
+</Peer>
+
+<Peer>
+    <Name>SignalMirror</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock50ms</clock_src>
+	  <HideName>YES</HideName>      
+      <tick>0.03</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\Signal_mirror.dll</ExternalApplication>
+	  
+	  <ExternalApplicationInfo>C:\PROVEtech_Cfg\Audi_Clusters\Sig_K3CANFD.txt;6;K3CANFD_Tx;K3CANFD_2_Tx;K3CANFD_3_Tx;K3CANFD_4_Tx;K3CANFD_5_Tx;K3CANFD_6_Tx</ExternalApplicationInfo> 
+    </Config> 
+  </Peer>
+  <Peer>
+    <Name>SignalMirror_MIBCAN</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock50ms</clock_src>
+	  <HideName>YES</HideName>      
+      <tick>0.05</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\Signal_mirror_MIBCAN.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\PROVEtech_Cfg\Audi_Clusters\Sig_MIBCAN.txt;6;MIBCAN_Tx;MIBCAN_2_Tx;MIBCAN_3_Tx;MIBCAN_4_Tx;MIBCAN_5_Tx;MIBCAN_6_Tx</ExternalApplicationInfo>
+    </Config> 
+  </Peer>
+
+
+	
+<!--**************************************************************************
+                                       power supply
+  ***********************************************************************************-->
+  <Peer> 
+		<Name>PowerSupply</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_200ms</clock_src>
+			<tick>0.2</tick>
+			<HideName>NO</HideName> 
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\HMP4040_v_2018_0_1.dll</ExternalApplication>
+			<ExternalApplicationInfo>COM4|1,2,3,4/COM5|5,6,0,100</ExternalApplicationInfo>
+		</Config>
+  </Peer>
+  <Peer>
+		<Name>DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_DMM</clock_src>
+			<tick>0.1</tick>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012_v_0_5.2(x32).dll</ExternalApplication>			
+			<ExternalApplicationInfo>192.168.0.3,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+  
+  
+</RCConfiguration>

@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+	<DebugLevel>1</DebugLevel>
+	<Package>
+		<Name>RCAnalog.dll</Name>
+	</Package> 
+	<Package>
+		<Name>RCVector.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCCAN.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGeneric.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCModelCom.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCEventSource.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCDisassembly.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCRBS.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericDevice.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCDigital.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericApplication.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCNIMIO.dll</Name>
+	</Package>
+	
+	<EventSource>
+		<Name> Idle </Name>
+		<Class> RC_CIdle </Class>
+	</EventSource>
+
+	<EventSource>
+		<Name>SysClock</Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>5</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_5ms</Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>5</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_25ms</Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>25</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_200ms</Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+<!-- *********************************************************************************************************************-->
+<!--      										         CAN														      -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name> Vector </Name>
+		<Class> RC_CXLDevice </Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>
+				<Name>CANV_HS_1</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 1,0,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_1</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 5,1,4</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_2</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 2,0,1</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_2</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 6,1,5</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_3</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 3,0,2</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_3</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 7,1,6</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_4</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 4,0,3</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_4</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 8,1,7</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_5</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 5,0,4</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_5</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 1,2,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>	
+			
+			<Port>
+				<Name>CANV_HS_6</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 6,0,5</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_6</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 2,2,1</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_7</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 7,0,6</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_7</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 3,2,2</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_8</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 8,0,7</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_8</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 4,2,3</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>		
+			
+			<Port>
+				<Name>CANV_HS_9</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 1,1,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_9</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 5,2,4</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>			
+			
+			<Port>
+				<Name>CANV_HS_10</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>
+					<HWPort>VN7572 Channel 2,1,1</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANV_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>  
+			<Port>
+				<Name>CANM_HS_10</Name>
+				<Class>RC_CCANPort</Class>
+				<Config>
+					<HWPort>VN7572 Channel 6,2,5</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\C1AHSEVO_CANV_2022_Q1_OFFICIAL\C1AHSEVO_CANM_2022_Q1_OFFICIAL.xml</RBSDescriptor>
+				</Config>
+			</Port>			
+		</Config>
+	</Device>    
+
+	
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_1</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_1</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_1_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_1</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_1</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_1</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_1_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_1</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_2</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_2</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_2_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_2</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_2</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_2</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_2_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_2</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_3</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_3</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_3_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_3</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_3</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_3</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_3_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_3</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_4</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_4</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_4_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_4</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_4</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_4</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_4_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_4</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_5</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_5</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_5_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_5</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_5</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_5</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_5_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_5</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_6</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_6</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_6_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_6</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_6</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_6</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_6_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_6</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_7</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_7</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_7_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_7</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_7</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_7</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_7_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_7</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_8</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_8</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_8_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_8</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_8</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_8</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_8_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_8</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_9</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_9</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_9_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_9</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_9</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_9</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_9_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_9</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_10</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_10</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_10_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANV_HS_10</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_10</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANM_HS_10</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANM_HS_10_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_5ms</clock_src>
+			<Port>CANM_HS_10</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<!-- *********************************************************************************************************************-->
+	<!--      									         Rack DUT IN / OUT													  -->
+	<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name>Advantech64Device</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock_25ms</clock_src>
+			<ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+			<ExternalDeviceConfigInfo>8</ExternalDeviceConfigInfo>
+			<Port>
+				<Name>Rack1_InOut</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack1INOUT</DeviceID>
+					<Width>bool</Width>					
+					<SignalSrc>
+						<Name>Device1.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device1.ParkingBreak</Name>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device1.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 2</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device1.Brake_Fluid_Level</Name>
+						<HWSignalSource>3/1/3</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 3</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device2.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device2.ParkingBreak</Name>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device2.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 6</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device2.Brake_Fluid_Level</Name>
+						<HWSignalSource>3/1/7</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 7</Description>
+					</SignalSrc>
+			
+					<SignalSrc>
+						<Name>Device3.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device3.ParkingBreak</Name>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device3.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 2</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device3.Brake_Fluid_Level</Name>
+						<HWSignalSource>4/1/3</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 3</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device4.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device4.ParkingBreak</Name>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device4.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 6</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device4.Brake_Fluid_Level</Name>
+						<HWSignalSource>4/1/7</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 7</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device5.POWER_SUPPLY</Name>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device5.ParkingBreak</Name>
+						<HWSignalSource>5/1/1</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device5.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>5/1/2</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 2</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device5.Brake_Fluid_Level</Name>
+						<HWSignalSource>5/1/3</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 3</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device6.POWER_SUPPLY</Name>
+						<HWSignalSource>5/1/4</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device6.ParkingBreak</Name>
+						<HWSignalSource>5/1/5</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device6.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>5/1/6</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 6</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device6.Brake_Fluid_Level</Name>
+						<HWSignalSource>5/1/7</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 5 And Line : 7</Description>
+					</SignalSrc>					
+				</Config>
+			</Port>
+			<Port>
+				<Name>Rack1_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack1OUT</DeviceID>
+					<Width>bool</Width>
+					<SignalSrc>
+						<Name>Device1.Strg_Wheel_SW1</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device1.Ignition</Name>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 1</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device1.Oil_Pressure</Name>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 2</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Device2.Strg_Wheel_SW1</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 4</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device2.Ignition</Name>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 5</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device2.Oil_Pressure</Name>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 3 And Line : 6</Description>
+					</SignalSrc>	
+
+					<SignalSrc>
+						<Name>Device3.Strg_Wheel_SW1</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device3.Ignition</Name>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 1</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device3.Oil_Pressure</Name>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 2</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Device4.Strg_Wheel_SW1</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 4</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device4.Ignition</Name>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 5</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device4.Oil_Pressure</Name>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 4 And Line : 6</Description>
+					</SignalSrc>	
+
+					<SignalSrc>
+						<Name>Device5.Strg_Wheel_SW1</Name>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device5.Ignition</Name>
+						<HWSignalSource>5/1/1</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 1</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device5.Oil_Pressure</Name>
+						<HWSignalSource>5/1/2</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 2</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Device6.Strg_Wheel_SW1</Name>
+						<HWSignalSource>5/1/4</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 4</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device6.Ignition</Name>
+						<HWSignalSource>5/1/5</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 5</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device6.Oil_Pressure</Name>
+						<HWSignalSource>5/1/6</HWSignalSource>
+						<Description>PCI card Rack1OUT Port : 5 And Line : 6</Description>
+					</SignalSrc>						
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>Rack2_InOut</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack2INOUT</DeviceID>
+					<Width>bool</Width>					
+					<SignalSrc>
+						<Name>Device7.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device7.ParkingBreak</Name>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device7.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 2</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device7.Brake_Fluid_Level</Name>
+						<HWSignalSource>3/1/3</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 3</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device8.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device8.ParkingBreak</Name>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device8.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 6</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device8.Brake_Fluid_Level</Name>
+						<HWSignalSource>3/1/7</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 3 And Line : 7</Description>
+					</SignalSrc>
+			
+					<SignalSrc>
+						<Name>Device9.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device9.ParkingBreak</Name>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device9.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 2</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device9.Brake_Fluid_Level</Name>
+						<HWSignalSource>4/1/3</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 3</Description>
+					</SignalSrc>	
+			
+					<SignalSrc>
+						<Name>Device10.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device10.ParkingBreak</Name>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device10.Windscreen_Fluid_Level</Name>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 6</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device10.Brake_Fluid_Level</Name>
+						<HWSignalSource>4/1/7</HWSignalSource>
+						<Description>PCI card Rack2INOUT Port : 4 And Line : 7</Description>
+					</SignalSrc>				
+				</Config>
+			</Port>
+			<Port>
+				<Name>Rack2_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack2OUT</DeviceID>
+					<Width>bool</Width>
+					<SignalSrc>
+						<Name>Device7.Strg_Wheel_SW1</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device7.Ignition</Name>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 1</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device7.Oil_Pressure</Name>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 2</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Device8.Strg_Wheel_SW1</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 4</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device8.Ignition</Name>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 5</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device8.Oil_Pressure</Name>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 3 And Line : 6</Description>
+					</SignalSrc>	
+
+					<SignalSrc>
+						<Name>Device9.Strg_Wheel_SW1</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device9.Ignition</Name>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 1</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device9.Oil_Pressure</Name>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 2</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Device10.Strg_Wheel_SW1</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 4</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device10.Ignition</Name>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 5</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device10.Oil_Pressure</Name>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>PCI card Rack2OUT Port : 4 And Line : 6</Description>
+					</SignalSrc>					
+				</Config>
+			</Port>
+			<Port>
+				<Name>Rack1_IN</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>Rack1INOUT</DeviceID>
+					<Width>uint8</Width>
+					<SignalSrc>
+						<Name>Clim_Room_SW</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/5:7</HWSignalSource>
+						<Description>Card02 Do bool(Out) Port : 0 And Line : 5-7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Sleep_mode</Name>
+						<HWSignalSource>1/1/7:7</HWSignalSource>
+						<Description>Card02 Do bool(Out) Port : 1 And Line : 7</Description>
+					</SignalSrc>
+				</Config>
+			</Port> 
+		<!-- *********************************************************************************************************************-->
+		<!--      										         Sw current														-->
+		<!-- *********************************************************************************************************************-->
+			<Port>
+				<Name>Current_SW_Box</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>SWCURRENT</DeviceID>
+					<Width>bool</Width>
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_1</Name>
+						<HWSignalSource>0/1/0</HWSignalSource>
+						<Description>DO Port  0 and Line 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_1</Name>
+						<HWSignalSource>1/1/4</HWSignalSource>
+						<Description>DO Port 1 and Line 4</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_2</Name>
+						<HWSignalSource>0/1/1</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_2</Name>
+						<HWSignalSource>1/1/5</HWSignalSource>
+						<Description>DO Port 1 and Line 5</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_3</Name>
+						<HWSignalSource>0/1/2</HWSignalSource>
+						<Description>DO Port  0 and Line 2</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_3</Name>
+						<HWSignalSource>1/1/6</HWSignalSource>
+						<Description>DO Port 1 and Line 6</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_4</Name>
+						<HWSignalSource>0/1/3</HWSignalSource>
+						<Description>DO Port  0 and Line 3</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_4</Name>
+						<HWSignalSource>1/1/7</HWSignalSource>
+						<Description>DO Port 1 and Line 7</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_5</Name>
+						<HWSignalSource>0/1/4</HWSignalSource>
+						<Description>DO Port  0 and Line 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_5</Name>
+						<HWSignalSource>2/1/0</HWSignalSource>
+						<Description>DO Port 2 and Line 0</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_6</Name>
+						<HWSignalSource>0/1/5</HWSignalSource>
+						<Description>DO Port  0 and Line 5</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_6</Name>
+						<HWSignalSource>2/1/1</HWSignalSource>
+						<Description>DO Port 2 and Line 1</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_7</Name>
+						<HWSignalSource>0/1/7</HWSignalSource>
+						<Description>DO Port  0 and Line 7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_7</Name>
+						<HWSignalSource>2/1/3</HWSignalSource>
+						<Description>DO Port 2 and Line 3</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_8</Name>
+						<HWSignalSource>1/1/0</HWSignalSource>
+						<Description>DO Port  1 and Line 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_8</Name>
+						<HWSignalSource>2/1/4</HWSignalSource>
+						<Description>DO Port 2 and Line 4</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_9</Name>
+						<HWSignalSource>1/1/1</HWSignalSource>
+						<Description>DO Port  1 and Line 1</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_9</Name>
+						<HWSignalSource>2/1/5</HWSignalSource>
+						<Description>DO Port 2 and Line 5</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_10</Name>
+						<HWSignalSource>1/1/2</HWSignalSource>
+						<Description>DO Port  1 and Line 2</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_10</Name>
+						<HWSignalSource>2/1/6</HWSignalSource>
+						<Description>DO Port 2 and Line 6</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_Amp</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>DO Port 3 and Line 0</Description>
+					</SignalSrc>			
+				</Config>
+			</Port> 
+		</Config>
+	</Device>
+
+	
+	<!-- *********************************************************************************************************************-->
+	<!--      					         Probe Humidity and temperature														  -->
+	<!-- *********************************************************************************************************************--> 	
+	<Peer>
+		<Name>Probe</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_200ms</clock_src>
+			<HideName>NO</HideName>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+			<ExternalApplicationInfo>127.0.0.1::11001</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+
+	<!-- *********************************************************************************************************************-->
+	<!--      										        PowerSupply														  -->
+	<!-- *********************************************************************************************************************-->  
+	<Peer>
+		<Name>PowerSupply_ETH</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<HideName>No</HideName>
+			<clock_src>SysClock_200ms</clock_src>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\HMWP4040_v_2019_0_5.dll</ExternalApplication>
+			<ExternalApplicationInfo>192.168.0.5,5025|1,2,3,4</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+ 
+	<Peer> 
+		<Name>PowerSupply_COM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_200ms</clock_src>
+			<HideName>NO</HideName> 
+			<tick>0.1</tick>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\HMP4040_v_2018_0_1.dll</ExternalApplication>
+			<ExternalApplicationInfo>COM4|5,6,7,8/COM5|9,10,0,0</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+ 
+	<!-- *********************************************************************************************************************-->
+	<!--      										      	  DMM															  -->
+	<!-- *********************************************************************************************************************-->  
+	
+	<!--<Peer>
+		<Name>Current</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_25ms</clock_src>
+			<HideName>NO</HideName>      
+			<tick>0.1</tick>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppNI_DMM.dll</ExternalApplication>
+			<ExternalApplicationInfo>C:\PROVEtech_Cfg\GenericApps\Env.ini</ExternalApplicationInfo>
+		</Config>
+	</Peer> -->  
+
+
+	<Peer>
+		<Name>Current.DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<tick>0.5</tick>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppDMM_HMC8012_v_0_2.dll</ExternalApplication>
+			<ExternalApplicationInfo>192.168.0.3,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+	
+	
+	<!-- *********************************************************************************************************************-->
+	<!--      							      	  NI card for digital acquisition											  -->
+	<!-- *********************************************************************************************************************-->  
+	<Device>
+		<Name>PCI-6229</Name>
+		<Class>RC_CNIMIODevice</Class>
+		<Config>
+			<clock_src>SysClock_200ms</clock_src>
+			<Port>
+				<Name>PCI6229_Analog</Name>
+				<Class>RC_CAnalogInPort</Class>
+				<Config>
+					<Width>bool</Width>
+					<NumSamplesPerCycle>1</NumSamplesPerCycle>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT1.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai8</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT1.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai0</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT2.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai1</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT2.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai10</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT3.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai11</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT3.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai3</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT4.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai4</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT4.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai13</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT5.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai14</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT5.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai6</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT6.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai7</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT6.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai24</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT7.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai25</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT7.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai17</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT8.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai18</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT8.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai27</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT9.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai28</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT9.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai20</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT10.PWM_Dimming</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai29</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT10.Vehicle_Speed</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/ai21</HWSignalSource>
+						<TerminalConfig>RSE</TerminalConfig>
+					</SignalSrc>
+				</Config>
+			</Port>
+			<Port>
+				<Name>PCI6229_Digital</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<Width>bool</Width>
+					<NumSamplesPerCycle>1</NumSamplesPerCycle>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT1.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line0</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT2.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line2</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT3.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line4</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT4.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line6</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT5.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line8</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT6.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line10</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT7.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line12</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT8.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line15</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT9.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line18</HWSignalSource>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>DigitalOutput.DUT10.SBR_Output</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>PCI6229/port0/line21</HWSignalSource>
+					</SignalSrc>
+				</Config>
+			</Port>
+		</Config>
+	</Device>
+	
+	<!-- *********************************************************************************************************************-->
+	<!--      										        Debug variables													  -->
+	<!-- *********************************************************************************************************************-->  
+	<Peer>
+		<Name>SriptLauncher</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_200ms</clock_src>
+			<HideName>YES</HideName> 
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\DebugVariables_2.dll</ExternalApplication>
+			<ExternalApplicationInfo>3;4;ListTest;StatusScript;CurScriptRun;ScriptProgress</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+</RCConfiguration>

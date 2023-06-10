@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+	<DebugLevel>1</DebugLevel>
+	<Package>
+		<Name>RCAnalog.dll</Name>
+	</Package> 
+	<Package>
+		<Name>RCVector.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGoepel.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCCAN.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGeneric.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCModelCom.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCEventSource.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDisassembly.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCRBS.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericDevice.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDigital.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericApplication.dll </Name>
+	</Package>
+	
+<!-- *********************************************************************************************************************-->
+<!--      										         Clock															  -->
+<!-- *********************************************************************************************************************-->    
+	<EventSource>
+		<Name> Idle </Name>
+		<Class> RC_CIdle </Class>
+	</EventSource>
+	<EventSource>
+		<Name> SysClock </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>30</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_CAN </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>4</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_PS </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>100</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+<!-- *********************************************************************************************************************-->
+<!--      										         CANV HS														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name> Vector </Name>
+		<Class> RC_CXLDevice </Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<Port>
+				<Name>CANV_HS_1</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 1,1,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+				<Port>
+				<Name>CANV_HS_2</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 2,1,1</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>CANV_HS_3</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 3,1,2</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+			
+			<Port>
+				<Name>CANV_HS_4</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 4,1,3</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+			
+			<Port>
+				<Name>CANV_HS_5</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 5,1,4</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+			
+			<Port>
+				<Name>CANV_HS_6</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 6,1,5</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+		</Config>
+	</Device>  
+<!-- *********************************************************************************************************************-->
+<!--      										         Rack DUT														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name>Advantech64Device</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+			<ExternalDeviceConfigInfo>8</ExternalDeviceConfigInfo>
+			
+			<Port>
+				<Name>Rack1_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack1INOUT</DeviceID>
+					<Width>bool</Width>
+					
+					<!--Device 1 Power Supply and Touch configuration-->
+					<SignalSrc>
+						<Name>Device1.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device1.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device1.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 2</Description>
+					</SignalSrc>
+
+					
+					<!--Device 2 Power Supply and Touch configuration-->
+					<SignalSrc>
+						<Name>Device2.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device2.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device2.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 6</Description>
+					</SignalSrc>
+
+					
+					<!--Device 3 Power Supply and Touch configuration-->
+					<SignalSrc>
+						<Name>Device3.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 0</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device3.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device3.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+					</SignalSrc>
+					
+					<!--Device 4 Power Supply and Touch configuration-->
+					<SignalSrc>
+						<Name>Device4.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 4</Description>
+					</SignalSrc>		
+					<SignalSrc>
+						<Name>Device4.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device4.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 6</Description>
+					</SignalSrc>					
+				
+					<!--Device 5 Power Supply and Touch configuration-->				
+					<SignalSrc>
+						<Name>Device5.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 0</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Device5.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 1</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device5.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 2</Description>
+					</SignalSrc>
+
+				</Config>
+			</Port>	
+			
+			<!--Device 6 Power Supply and Touch configuration-->			
+			<Port>
+				<Name>Rack2_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Rack1INOUT</DeviceID>
+					<Width>bool</Width>
+					
+					<SignalSrc>
+						<Name>Device6.POWER_SUPPLY</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 4</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Device6.SP_CLB6_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 5</Description>
+					</SignalSrc>	
+					<SignalSrc>
+						<Name>Device6.SP_CLB6_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>5/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 6</Description>
+					</SignalSrc>
+					
+				</Config>
+			</Port>
+			
+			<!--Touch Rack Configuration-->
+			
+			<Port>
+				<Name>Rack_Touch1</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>Touch1</DeviceID>
+					<Width>bool</Width>
+					
+					<!--Device 1 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					
+					<SignalSrc>
+						<Name>Device1.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device1.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 2</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device1.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 1</Description>
+					</SignalSrc>
+					
+					<!--Device 2 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					<SignalSrc>
+						<Name>Device2.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/3</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 3</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Device2.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>					
+					<SignalSrc>
+						<Name>Device2.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 5</Description>
+					</SignalSrc>				
+					
+					<!--Device 3 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					<SignalSrc>
+						<Name>Device3.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 6</Description>
+					</SignalSrc>					
+					<SignalSrc>
+						<Name>Device3.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>3/1/7</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 7</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device3.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 0</Description>
+					</SignalSrc>
+					
+					<!--Device 4 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					<SignalSrc>
+						<Name>Device4.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 0</Description>
+					</SignalSrc>					
+					<SignalSrc>
+						<Name>Device4.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 2</Description>
+					</SignalSrc>				
+					<SignalSrc>
+						<Name>Device4.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/3</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 3</Description>
+					</SignalSrc>
+					
+					<!--Device 5 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					<SignalSrc>
+						<Name>Device5.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 4</Description>
+					</SignalSrc>					
+					<SignalSrc>
+						<Name>Device5.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 5</Description>
+					</SignalSrc>			
+					<SignalSrc>
+						<Name>Device5.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 6</Description>
+					</SignalSrc>
+					
+					<!--Device 6 Touch Push, Pull and Power Supply for Solenoid configurations-->
+					<SignalSrc>
+						<Name>Device6.Touch_Power</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>4/1/7</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 4 And Line : 7</Description>
+					</SignalSrc>					
+					<SignalSrc>
+						<Name>Device6.Touch_Push</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 0</Description>
+					</SignalSrc>							
+					<SignalSrc>
+						<Name>Device6.Touch_Pull</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>5/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 5 And Line : 1</Description>
+					</SignalSrc>
+											
+				</Config>
+			</Port>
+			
+			<!--Climatic Room Switch Rack configuration-->			
+			<Port>
+				<Name>Rack2_IN</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>Rack1INOUT</DeviceID>
+					<Width>uint8</Width>
+					<SignalSrc>
+						<Name>Clim_Room_SW</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/5:7</HWSignalSource>
+						<Description>Card02 Do bool(Out) Port : 0 And Line : 5-7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Sleep_mode</Name>
+						<HWSignalSource>1/1/7:7</HWSignalSource>
+						<Description>Card02 Do bool(Out) Port : 1 And Line : 7</Description>
+					</SignalSrc>
+				</Config>
+			</Port> 
+			
+			
+			<!-- *********************************************************************************************************************-->
+			<!--      										         Switch current													  -->
+			<!-- *********************************************************************************************************************-->
+				<Port>
+				<Name>Current_SW_Box</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>SWCURRENT</DeviceID>
+					<Width>bool</Width>
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_1</Name>
+						<HWSignalSource>1/1/4</HWSignalSource>
+						<Description>DO Port 1 and Line 4</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_1</Name>
+						<HWSignalSource>0/1/0</HWSignalSource>
+						<Description>DO Port 0 and Line 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_2</Name>
+						<HWSignalSource>1/1/5</HWSignalSource>
+						<Description>DO Port  1 and Line 5</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_2</Name>
+						<HWSignalSource>0/1/1</HWSignalSource>
+						<Description>DO Port 0 and Line 1</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_3</Name>
+						<HWSignalSource>1/1/6</HWSignalSource>
+						<Description>DO Port 1 and Line 6</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_3</Name>
+						<HWSignalSource>0/1/2</HWSignalSource>
+						<Description>DO Port 0 and Line 2</Description>
+					</SignalSrc>
+					
+					
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_4</Name>
+						<HWSignalSource>1/1/7</HWSignalSource>
+						<Description>DO Port 1 and Line 7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_4</Name>
+						<HWSignalSource>0/1/3</HWSignalSource>
+						<Description>DO Port 0 and Line 3</Description>
+					</SignalSrc>
+			
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_5</Name>
+						<HWSignalSource>2/1/0</HWSignalSource>
+						<Description>DO Port 2 and Line 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_5</Name>
+						<HWSignalSource>0/1/4</HWSignalSource>
+						<Description>DO Port 0 and Line 4</Description>
+					</SignalSrc>
+	
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_6</Name>
+						<HWSignalSource>0/1/5</HWSignalSource>
+						<Description>DO Port 0 and Line 5</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Current.SW_PwrSupply_6</Name>
+						<HWSignalSource>2/1/1</HWSignalSource>
+						<Description>DO Port 2 and Line 1</Description>
+					</SignalSrc>
+
+					<SignalSrc>
+						<Name>Current.SW_Amp</Name>
+						<HWSignalSource>1/1/7</HWSignalSource>
+						<Description>DO Port 1 and Line 7</Description>
+					</SignalSrc>			
+				</Config>
+			</Port> 
+		</Config>
+	</Device>
+
+<!-- *********************************************************************************************************************-->
+<!--      										         Peer CAN														  -->
+<!-- *********************************************************************************************************************-->   
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_1</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_1</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_1_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_1</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_2</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_2</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_2_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_2</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	
+	<Peer>
+		<Name>CANV_HS_3</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_3</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_3_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_3</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_4</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_4</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_4_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_4</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	
+	<Peer>
+		<Name>CANV_HS_5</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_5</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_5_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_5</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_6</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_6</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_6_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_6</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+
+
+<!-- ********************************************************************************************************************************************-->
+<!--												   Peer DLL																					-->
+<!-- ********************************************************************************************************************************************-->  
+
+	<!-- Rohde&Schwarz Power Supply module configuration -->
+	<Peer> 
+		<Name>PowerSupply</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+		  <clock_src>SysClock_PS</clock_src>
+		  <HideName>NO</HideName> 
+		  <tick>0.2</tick>
+		  <ExternalApplication>C:\PROVEtech_Cfg\GenericApps\HMP4040_v_2018_0_1.dll</ExternalApplication>
+		  <ExternalApplicationInfo>COM4|1,2,3,4/COM3|5,6,0,0</ExternalApplicationInfo>
+		</Config>
+    </Peer>
+	
+	<!--
+	<Peer>
+		<Name>CS</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_PS</clock_src>
+			<HideName>YES</HideName>      
+			<tick>0.1</tick>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppPsCS.dll</ExternalApplication>
+			<ExternalApplicationInfo>C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_1025\Iteration06\Env.ini,VBatt,9</ExternalApplicationInfo>
+		</Config> 
+	</Peer> -->
+	
+	
+	
+	<!-- Rohde&Schwarz HMC8012 DMM configuration-->
+
+	<Peer>
+		<Name>Current.DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<HideName>No</HideName>
+			<clock_src>SysClock</clock_src>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppDMM_HMC8012.dll</ExternalApplication>
+			<ExternalApplicationInfo>192.168.000.003,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+<!-- *********************************************************************************************************************-->
+<!--      										        Rotronic Temperature and Humidity Probe														  -->
+<!-- *********************************************************************************************************************-->
+	<EventSource>
+		<Name>SysClock_Probe</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<Peer>
+		<Name>Probe</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_Probe</clock_src>
+			<HideName>NO</HideName>
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+			<ExternalApplicationInfo>FRF19120179::11001</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+<!-- *********************************************************************************************************************-->
+<!-- *********************************************************************************************************************-->
+
+	<Peer>
+		<Name>SriptLauncher</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>YES</HideName> 
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\DebugVariables.dll</ExternalApplication>
+			<ExternalApplicationInfo>3;4;ListTest;StatusScript;CurScriptRun;ScriptProgress</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>DetectionCurrent</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>YES</HideName> 
+			<ExternalApplication>C:\PROVEtech_Cfg\GenericApps\DebugVariables_1.dll</ExternalApplication>
+			<ExternalApplicationInfo>8;6;Dut_Current_1;Dut_Current_2;Dut_Current_3;Dut_Current_4;Dut_Current_5;Dut_Current_6</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+</RCConfiguration>

@@ -233,6 +233,8 @@ def get_fg_color(oem_str):
         colorr = 'black'
     elif 'Maseratti' in oem_str or 'maseratti' in oem_str or 'MASERATTI' in oem_str:
         colorr = 'red'
+    elif 'evo' in oem_str or 'Evo' in oem_str or 'EVO' in oem_str:
+         colorr = 'white'
     else:
         colorr = 'black'
     #print("fg: " + colorr)
@@ -257,6 +259,8 @@ def get_bg_color(oem_str):
         colorr = 'red'
     elif 'Maseratti' in oem_str or 'maseratti' in oem_str or 'MASERATTI' in oem_str:
         colorr = 'blue'
+    elif 'evo' in oem_str or 'Evo' in oem_str or 'EVO' in oem_str:
+         colorr = 'green'
     else:
         colorr = 'orange'
     #print("bg: " + colorr)

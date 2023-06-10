@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<RCConfiguration>
+  <!--DebugLevel 0: all, 1: warnings and errors, 2: only errors, default is “1”-->
+  <DebugLevel>0</DebugLevel>
+  <Package>
+    <Path>.</Path>
+    <Name>RCVector.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCCAN.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCNIMIO.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericDevice.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCAnalog.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCDigital.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCPWM.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModelCom.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCEventSource.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCDisassembly.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+  <EventSource>
+    <!--Name of the player-->
+    <Name>Idle</Name>
+    <!--Name of the Class to be used to create the player-->
+    <Class>RC_CIdle</Class>
+    <Config>
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>SysClock</Name>
+    <Class>RC_CSysClock</Class>
+    <!--Player specific configuration-->
+    <Config>
+      <Interface>
+      </Interface>
+      <Attribute>
+        <TimerPeriod_ms>10</TimerPeriod_ms>
+      </Attribute>
+      <Signal>
+      </Signal>
+      <Datagram>
+      </Datagram>
+      <Player>
+      </Player>
+    </Config>
+  </EventSource>
+  <Device>
+    <Name>Vector</Name>
+    <Class>RC_CXLDevice</Class>
+    <!--Device specific configuration-->
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>CAN_BD</Name>
+        <Class>RC_CCANPort</Class>
+        <Config>
+          <!--Name,hwIndex,hwChannel-->
+          <!--IsExtendedID>No</IsExtendedID-->
+          <HWPort>VN1530 Channel 1,0,0</HWPort>
+          <BitRate>125000</BitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\PSA_Clusters\_BusSignalDef\P2M_LS_21Q3\P2M_LS_21Q3.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\PSA_Clusters\_BusSignalDef\P2M_LS_21Q3\P2M_LS_21Q3.xml</RBSDescriptor>
+        </Config>
+      </Port>
+    </Config>
+  </Device>
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CAN_BD</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CAN_BD</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CAN_BD_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>CAN_BD</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+    </Config>
+  </Peer>
+  <!-- <Peer> -->
+    <!-- <Name>Type23_RE_VN1630_CH1_P2M_1Way_ReadWrite</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\CopySignalOnChange_GenApp\CopySignalOnChange_GenApp.dll</ExternalApplication> -->
+      <!-- <ExternalApplicationInfo>C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\Type23_RE_VN1630_CH1_P2M.1Way_ReadWrite.txt</ExternalApplicationInfo> -->
+      <!-- <HideName>yes</HideName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <SignalConnectionFile>C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\Type23_RE_VN1630_CH1_P2M.2Way_Write.txt</SignalConnectionFile> -->
+</RCConfiguration>

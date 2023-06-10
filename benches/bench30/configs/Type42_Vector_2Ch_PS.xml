@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+	<DebugLevel>1</DebugLevel>
+	<Package>
+		<Name>RCAnalog.dll</Name>
+	</Package> 
+	<Package>
+		<Name>RCVector.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGoepel.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCCAN.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGeneric.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCModelCom.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCEventSource.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDisassembly.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCRBS.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericDevice.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDigital.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericApplication.dll </Name>
+	</Package>
+	
+<!-- *********************************************************************************************************************-->
+<!--      										         Clock															  -->
+<!-- *********************************************************************************************************************-->    
+	<EventSource>
+		<Name> Idle </Name>
+		<Class> RC_CIdle </Class>
+	</EventSource>
+	<EventSource>
+		<Name> SysClock </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>30</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_CAN </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>4</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_PS </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>100</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+<!-- *********************************************************************************************************************-->
+<!--      										         CANV HS														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name> Vector </Name>
+		<Class> RC_CXLDevice </Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<Port>
+				<Name>CANV_HS_1</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 1,0,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			
+		</Config>
+	</Device>
+	<!-- *********************************************************************************************************************-->
+<!--      										         Rack DUT														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name>Advantech64Device</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+			<ExternalDeviceConfigInfo>8</ExternalDeviceConfigInfo>
+			<Port>
+				<Name>Rack2_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>PCI-1751,BID#0</DeviceID>
+					<Width>bool</Width>
+			
+					<SignalSrc>
+						<Name>Device1.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>	
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>Rack2_IN</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>PCI-1751,BID#0</DeviceID>
+					<Width>uint8</Width>
+					<SignalSrc>
+						<Name>Clim_Room_SW</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/5:7</HWSignalSource>
+						<Description>PCI-1751,BID#0 Do bool(Out) Port : 0 And Line : 5-7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Sleep_mode</Name>
+						<HWSignalSource>1/1/7:7</HWSignalSource>
+						<Description>PCI-1751,BID#0 Do bool(Out) Port : 1 And Line : 7</Description>
+					</SignalSrc>
+				</Config>
+			</Port>
+			
+		</Config>
+	</Device>
+	
+<!-- *********************************************************************************************************************-->
+<!--      										         Peer CAN														  -->
+<!-- *********************************************************************************************************************-->   
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_1</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_1</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_1_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_1</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	
+
+
+</RCConfiguration>

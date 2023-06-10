@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>1</DebugLevel>
+  <Package>
+    <Path> . </Path>
+    <Name> RCNIMIO.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCCAN.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCAnalog.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCDigital.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCPWM.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCModelCom.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCEventSource.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCDisassembly.dll </Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGoepel.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+   <Package>
+    <Path>.</Path>
+    <Name>RCGenericDevice.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <!-- <Package>
+    <Path>.</Path>
+    <Name>GenAppTempHumProbe.dll</Name>
+  </Package> -->
+  
+  <EventSource>
+    <Name>ModelClock10ms</Name>
+    <Class>RC_CSysClock</Class>
+    <Config>
+      <Attribute>
+        <TimerPeriod_ms>10</TimerPeriod_ms>
+      </Attribute>
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name>Idle</Name>
+    <Class>RC_CIdle</Class>
+    <Config />
+  </EventSource>
+  <EventSource>
+    <Name> SysClock_PS </Name>
+    <Class> RC_CSysClock </Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 100 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name> SysClock </Name>
+    <Class> RC_CSysClock </Class>
+    <!-- Player specific configuration -->
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 10 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name> SysClock_HFSW </Name>
+    <Class> RC_CSysClock </Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 200 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name> SysClock_50ms </Name>
+    <Class> RC_CSysClock </Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 50 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <EventSource>
+    <Name> SysClock_DMM </Name>
+    <Class> RC_CSysClock </Class>
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 200 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <Device>
+    <Name>Goepel_GAPI</Name>
+    <Class>RC_CGoepelDevice</Class>
+    <Config>
+      <DeviceType>GAPI</DeviceType>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>CANB</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN1</HWPort>
+          <BitRate>500000</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	    <Port>
+        <Name>CANB_1</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN2</HWPort>
+          <BitRate>500000</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>CANB_2</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN3</HWPort>
+          <BitRate>500000</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  	  <!-- <Port> -->
+        <!-- <Name>CANB_3</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN4</HWPort> -->
+          <!-- <BitRate>500000</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+	  <!-- <Port> -->
+        <!-- <Name>CANB_4</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN5</HWPort> -->
+          <!-- <BitRate>500000</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+	  <!-- <Port> -->
+        <!-- <Name>CANB_5</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN6</HWPort> -->
+          <!-- <BitRate>500000</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\HMI_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+      <Port>
+        <Name>CANC</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN7</HWPort>
+          <BitRate>666666</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>CANC_1</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN8</HWPort>
+          <BitRate>666666</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>CANC_2</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>CAN9</HWPort>
+          <BitRate>666666</BitRate>
+          <IsExtendedID>Mixed</IsExtendedID>
+          <Size_MonitorBuffer>50000</Size_MonitorBuffer>
+          <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <!-- <Port> -->
+        <!-- <Name>CANC_3</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN10</HWPort> -->
+          <!-- <BitRate>666666</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+	  <!-- <Port> -->
+        <!-- <Name>CANC_4</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN11</HWPort> -->
+          <!-- <BitRate>666666</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+	  <!-- <Port> -->
+        <!-- <Name>CANC_5</Name> -->
+        <!-- <Class> RC_CCANPort </Class> -->
+        <!-- <Config> -->
+          <!-- <HWPort>CAN12</HWPort> -->
+          <!-- <BitRate>666666</BitRate> -->
+          <!-- <IsExtendedID>Mixed</IsExtendedID> -->
+          <!-- <Size_MonitorBuffer>50000</Size_MonitorBuffer> -->
+          <!-- <NWDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.dbc</NWDescriptor> -->
+          <!-- <RBSDescriptor>C:\PROVEtech_Cfg\DAG_IC_MFA\_BusSignalDef\ICC5_SFTP2018_2020_31a0\CHASSIS_ICC5_SFTP2018_2020_31a0.xml</RBSDescriptor> -->
+        <!-- </Config> -->
+      <!-- </Port> -->
+    </Config>
+  </Device>
+  <!--ENTER <Device>..........</Device> HERE-->
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANB</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANB</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_1</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANB_1</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_1_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANB_1</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_2</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANB_2</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANB_2_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANB_2</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <!-- <Peer> -->
+    <!-- <Name>CANB_3</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANB_3</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANB_3_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANB_3</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANB_4</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANB_4</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANB_4_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANB_4</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANB_5</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANB_5</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANB_5_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANB_5</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <Peer>
+    <Name>CANC</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANC</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANC</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_1</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANC_1</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_1_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANC_1</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_2</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CANC_2</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CANC_2_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>CANC_2</Port>
+      <RenameSignalActivate>TX_enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <RenameSignalIncrement>Step</RenameSignalIncrement>
+    </Config>
+  </Peer>
+  <!-- <Peer> -->
+    <!-- <Name>CANC_3</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANC_3</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANC_3_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANC_3</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANC_4</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANC_4</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANC_4_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANC_4</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANC_5</Name> -->
+    <!-- <Class>RC_CDisassembler</Class> -->
+    <!-- <Config> -->
+      <!-- <Port>CANC_5</Port> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CANC_5_Tx</Name> -->
+    <!-- <Class>RC_CRBS</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <Port>CANC_5</Port> -->
+      <!-- <RenameSignalActivate>TX_enable</RenameSignalActivate> -->
+      <!-- <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable> -->
+      <!-- <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime> -->
+      <!-- <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout> -->
+      <!-- <RenameSignalActive>Active</RenameSignalActive> -->
+      <!-- <RenameSignalControl>Control</RenameSignalControl> -->
+      <!-- <UseLoadDistribution>yes</UseLoadDistribution> -->
+      <!-- <RenameSignalIncrement>Step</RenameSignalIncrement> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+
+     <!--**************************************************************************
+                                      ADVENTECH POWER PRODUCT
+  ***********************************************************************************-->
+ <Device>
+	  <Name>Advantech_USB_Modules</Name>
+	  <Class>RC_CGenericDevice</Class>
+	  <Config>
+	    <clock_src>SysClock</clock_src>
+	    <ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+	    <ExternalDeviceConfigInfo>0</ExternalDeviceConfigInfo>
+		<Port>
+        <Name>Rack1_Out</Name>
+        <Class>RC_CDigitalOutPort</Class>
+        <Config>
+          <DeviceID>PCI-1751Rack1OUT,BID#2</DeviceID>
+          <Width>bool</Width>
+          <SignalSrc>
+            <Name>Device1.P_KL30_SW</Name>
+            <HWSignalSource>3/1/0</HWSignalSource>
+            
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>Device2.P_KL30_SW</Name>
+            <HWSignalSource>3/1/4</HWSignalSource>
+       
+            <Description> Dig bool(Out) Port : 3 And Line : 4</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>Device3.P_KL30_SW</Name>
+            <HWSignalSource>4/1/0</HWSignalSource>
+        
+            <Description> Dig bool(Out) Port : 3 And Line : 4</Description>
+          </SignalSrc>
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device4.P_KL30_SW</Name> -->
+            <!-- <HWSignalSource>4/1/4</HWSignalSource> -->
+        
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 4</Description> -->
+          <!-- </SignalSrc> -->
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device5.P_KL30_SW</Name> -->
+            <!-- <HWSignalSource>5/1/0</HWSignalSource> -->
+        
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 4</Description> -->
+          <!-- </SignalSrc> -->
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device6.P_KL30_SW</Name> -->
+            <!-- <HWSignalSource>5/1/4</HWSignalSource> -->
+        
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 4</Description> -->
+          <!-- </SignalSrc> -->
+		 </Config>
+	    </Port>
+		 <!--**************************************************************************
+                                      SWITCH CURRENT
+  ***********************************************************************************-->
+		<Port>
+	      <Name>Sw_Current_BOX</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>PCI-1751SWCURRENT</DeviceID>
+	        <Width>bool</Width>
+			<SignalSrc>
+			  <Name>SW_CURRENT_1</Name>			  
+			  <HWSignalSource>0/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_2</Name>			  
+			  <HWSignalSource>0/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_3</Name>			  
+			  <HWSignalSource>0/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_CURRENT_4</Name>			   -->
+			  <!-- <HWSignalSource>0/1/3</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_CURRENT_5</Name>			   -->
+			  <!-- <HWSignalSource>0/1/4</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_CURRENT_6</Name>			   -->
+			  <!-- <HWSignalSource>0/1/5</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<SignalSrc>
+			  <Name>SW_SENSE_1</Name>			  
+			  <HWSignalSource>3/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_SENSE_2</Name>			  
+			  <HWSignalSource>3/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_SENSE_3</Name>			  
+			  <HWSignalSource>3/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_SENSE_4</Name>			   -->
+			  <!-- <HWSignalSource>3/1/3</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_SENSE_5</Name>			   -->
+			  <!-- <HWSignalSource>3/1/4</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<!-- <SignalSrc> -->
+			  <!-- <Name>SW_SENSE_6</Name>			   -->
+			  <!-- <HWSignalSource>3/1/5</HWSignalSource> -->
+			  <!-- <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description> -->
+			<!-- </SignalSrc> -->
+			<SignalSrc>
+			  <Name>Power_Grabber</Name>			  
+			  <HWSignalSource>1/1/6</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			
+	      </Config>
+	    </Port>
+	    
+	    <Port>
+        <Name>Rack1_In</Name>
+        <Class>RC_CDigitalInPort</Class>
+        <Config>
+          <DeviceID>PCI-1751Rack1OUT,BID#2</DeviceID>
+          <Width>uint8</Width>
+          <SignalSrc>
+            <Name>Clim_Room_SW</Name>
+            <HWSignalSource>0/1/5:7</HWSignalSource>
+            <Description>Card02 Do bool(Out) Port : 5 And Line : 4 to 6</Description>
+          </SignalSrc>
+          <SignalSrc>
+            <Name>Sleep_mode</Name>
+            <HWSignalSource>1/1/7:7</HWSignalSource>
+            <Description>Card02 Do bool(Out) Port : 5 And Line : 7</Description>
+          </SignalSrc>
+	      </Config>
+	    </Port>		
+		<Port>
+        <Name>Rack1_TunerBoxSW</Name>
+        <Class>RC_CDigitalOutPort</Class>
+        <Config>
+          <DeviceID>SWRF</DeviceID>
+          <Width>bool</Width>
+		  <SignalSrc>
+            <Name>Device1.RFSW</Name>
+            <HWSignalSource>1/1/0</HWSignalSource>
+      
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>Device2.RFSW</Name>
+            <HWSignalSource>1/1/1</HWSignalSource>
+     
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>Device3.RFSW</Name>
+            <HWSignalSource>1/1/2</HWSignalSource>
+        
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device4.RFSW</Name> -->
+            <!-- <HWSignalSource>1/1/3</HWSignalSource> -->
+      
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 0</Description> -->
+          <!-- </SignalSrc> -->
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device5.RFSW</Name> -->
+            <!-- <HWSignalSource>1/1/4</HWSignalSource> -->
+        
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 0</Description> -->
+          <!-- </SignalSrc> -->
+		  <!-- <SignalSrc> -->
+            <!-- <Name>Device6.RFSW</Name> -->
+            <!-- <HWSignalSource>1/1/5</HWSignalSource> -->
+      
+            <!-- <Description> Dig bool(Out) Port : 3 And Line : 0</Description> -->
+          <!-- </SignalSrc> -->
+		  <SignalSrc>
+            <Name>CMW500SW</Name>
+            <HWSignalSource>2/1/0</HWSignalSource>
+        
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>WIFI</Name>
+            <HWSignalSource>2/1/2</HWSignalSource>
+       
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>BT</Name>
+            <HWSignalSource>2/1/1</HWSignalSource>
+       
+            <Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+          </SignalSrc>
+          <SignalSrc>
+            <Name>FM_AM_DRS_SW</Name>
+            <HWSignalSource>6/1/0</HWSignalSource>
+            <Description>Card02 Do bool(Out) Port : 5 And Line : 4 to 6</Description>
+          </SignalSrc>
+		  <SignalSrc>
+            <Name>LVDS_SW</Name>
+            <HWSignalSource>6/1/1</HWSignalSource>
+            <Description>Card02 Do bool(Out) Port : 5 And Line : 7</Description>
+          </SignalSrc>
+	      </Config>
+	    </Port>	
+	  </Config>
+	</Device>
+	
+	<!--**************************************************************************
+                                      grabber
+  ***********************************************************************************-->	
+	  <Peer>
+		<Name>TestLVDS</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+		  <clock_src>SysClock</clock_src>
+		  <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\TestLVDS_V1.5.2.dll</ExternalApplication>
+		  <ExternalApplicationInfo></ExternalApplicationInfo>
+		</Config>
+  </Peer>
+	
+	<!--**************************************************************************
+                                      grabber
+  ***********************************************************************************-->
+  <Peer>
+		<Name>Grabber</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\Ruetz_Grabber.dll</ExternalApplication>
+			<ExternalApplicationInfo>C:\Temp\Acq</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+<!--**************************************************************************
+                                      SWTCH
+  ***********************************************************************************-->
+  <Peer>
+    <Name>HFSW</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_HFSW</clock_src>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppHFSwitch_v_2018_06.dll</ExternalApplication>
+      <ExternalApplicationInfo>COM7,00,INFOTAINMENT|COM8,00,DISPLAY_High</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+   <!--**************************************************************************
+                                       power supply
+  ***********************************************************************************-->
+  
+  <Peer>
+    <Name>PowerSupply</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_PS</clock_src>
+      <tick>0.05</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\PowerSupply_COM_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>COM4;CH_1-&gt;[I=30][V=13.5][OVP=23][OCP=30][ErrTimeout_s=60][Out=1];</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CS</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_PS</clock_src>
+	  <HideName>YES</HideName>      
+      <tick>0.1</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppPsCS.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\PROVEtech_Cfg\DAG_IC_MFA\DAG_IC_MFA2\Env.ini,P_KL30_SW,2</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  <!--**************************************************************************
+                                      DMM
+  ***********************************************************************************-->
+ 
+ <Peer>
+    <Name>HMC_8012</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_DMM</clock_src>
+      <tick>0.5</tick>
+	  <!--<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012.dll</ExternalApplication>-->
+	  <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012_v_0_2.dll</ExternalApplication>
+	  <!--ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012_v_0_1_.dll</ExternalApplication-->
+	  <ExternalApplicationInfo>192.168.0.3,5025</ExternalApplicationInfo>
+	</Config>
+  </Peer>
+  <Peer>
+	<Name>debug</Name>
+	<Class>RC_CGenericApplication</Class>
+	<Config>
+		<clock_src>SysClock</clock_src>
+		<HideName>Yes</HideName>
+		<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\DebugVariables_2017.dll</ExternalApplication>
+		<ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\DAG_IC_MFA\DAG_IC_MFA2\mdbgvar.txt</ExternalApplicationInfo>
+	</Config>
+</Peer>
+
+<Peer>
+	<Name>Probe</Name>
+	<Class>RC_CGenericApplication</Class>
+	<Config>
+		<clock_src>SysClock_DMM</clock_src>
+		<HideName>NO</HideName>
+		<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+		
+	</Config>
+</Peer>
+
+  <!-- <Peer> -->
+    <!-- <Name>HazardLights</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>HazardLights</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>TripComputer1</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulationV2\SignalManipulationV2.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulationV2\SignalManipulationV2.dll</ModelDll> -->
+      <!-- <RootNodeName>TC_Fuel.Type1</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>TripComputer2</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulationV2\SignalManipulationV2.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulationV2\SignalManipulationV2.dll</ModelDll> -->
+      <!-- <RootNodeName>TC_Fuel.Type2</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>FuelLvl</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>FuelLvl</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Speedometer</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>Speedometer</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Tachometer</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>Tachometer</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Clock</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config /> -->
+    <!-- <Config> -->
+      <!-- <ExternalApplicationInfo> -->
+      <!-- </ExternalApplicationInfo> -->
+      <!-- <RootNodeName>Clock</RootNodeName> -->
+      <!-- <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\Clock.dll</ExternalApplication> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>SelectedGear</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>SelectedGear</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Model_OFN1</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\OFN_GuestGen\OFN_GuestGen.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\OFN_GuestGen\OFN_GuestGen.dll</ModelDll> -->
+      <!-- <RootNodeName>Gesture_GEN.OFN1</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Model_TPAD</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\TPAD_GestGen\TPAD_GestGen.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\TPAD_GestGen\TPAD_GestGen.dll</ModelDll> -->
+      <!-- <RootNodeName>Gesture_GEN.TPAD</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Model_OFN2</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\OFN_GuestGen\OFN_GuestGen.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\OFN_GuestGen\OFN_GuestGen.dll</ModelDll> -->
+      <!-- <RootNodeName>Gesture_GEN.OFN2</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>VIN</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\VIN_MFA2\VIN_MFA2.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\VIN_MFA2\VIN_MFA2.dll</ModelDll> -->
+      <!-- <RootNodeName>VIN</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>CurrentGear</Name> -->
+    <!-- <Class>RC_CModel</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ModelHeader>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.h</ModelHeader> -->
+      <!-- <ModelDll>C:\JCI_PROVEtech_Libs\Simulink_RE_atached\SignalManipulation\SignalManipulation.dll</ModelDll> -->
+      <!-- <RootNodeName>CurrentGear</RootNodeName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <Peer> -->
+    <!-- <Name>Type1_RE_Goepel_2CHs_1Way_ReadWrite</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock</clock_src> -->
+      <!-- <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\CopySignalOnChange_GenApp.dll</ExternalApplication> -->
+      <!-- <ExternalApplicationInfo>C:\PROVEtech_Cfg\DAG_IC_MFA\DAG_IC_MFA2_Trucks\Iteration_E030\Type1_RE_Goepel_2CHs_1Way_ReadWrite2218.568.txt</ExternalApplicationInfo> -->
+      <!-- <HideName>yes</HideName> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+  <!-- <SignalConnectionFile>C:\PROVEtech_Cfg\DAG_IC_MFA\DAG_IC_MFA2_Trucks\Iteration_E030\Type1_RE_Goepel_2CHs_2Way_Write_2218.568.txt</SignalConnectionFile> -->
+</RCConfiguration>

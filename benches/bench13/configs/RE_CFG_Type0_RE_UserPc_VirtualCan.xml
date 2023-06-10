@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>1</DebugLevel>
+  <Package>
+    <Path> . </Path>
+    <Name> RCVector.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCCAN.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCModelCom.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCEventSource.dll </Name>
+  </Package>
+  <Package>
+    <Path> . </Path>
+    <Name> RCDisassembly.dll </Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCRBS.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCModel.dll</Name>
+  </Package>
+  <Package>
+    <Path>.</Path>
+    <Name>RCGenericApplication.dll</Name>
+  </Package>
+  <EventSource>
+    <!-- Name of the player -->
+    <Name> Idle </Name>
+    <!--Name of the Class to be used to create the player-->
+    <Class> RC_CIdle </Class>
+    <Config />
+  </EventSource>
+  <EventSource>
+    <Name> SysClock </Name>
+    <Class> RC_CSysClock </Class>
+    <!-- Player specific configuration -->
+    <Config>
+      <Interface />
+      <Attribute>
+        <TimerPeriod_ms> 10 </TimerPeriod_ms>
+      </Attribute>
+      <Signal />
+      <Datagram />
+      <Player />
+    </Config>
+  </EventSource>
+  <!-- END of NIMIO example-->
+  <Device>
+    <Name> Vector </Name>
+    <Class> RC_CXLDevice </Class>
+    <!-- Device specific configuration -->
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <Port>
+        <Name>CAN_GlobalA_LS</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <!-- Name,hwIndex,hwChannel -->
+          <HWPort>Virtual Channel 1</HWPort>
+          <BitRate>125000</BitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\GM_HUD\_BusSignalDef\GlobalA_LSCpy_10_01_2018\GlobalA_LSCpy_10_01_2018.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\GM_HUD\_BusSignalDef\GlobalA_LSCpy_10_01_2018\GlobalA_LSCpy_10_01_2018.xml</RBSDescriptor>
+        </Config>
+      </Port>
+    </Config>
+  </Device>
+  <!--ENTER <Device>..........</Device> HERE-->
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CAN_GlobalA_LS</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>CAN_GlobalA_LS</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CAN_GlobalA_LS_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>CAN_GlobalA_LS</Port>
+      <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+      <RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+      <RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+      <RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+      <RenameSignalActive>Active</RenameSignalActive>
+      <RenameSignalControl>Control</RenameSignalControl>
+      <UseLoadDistribution>yes</UseLoadDistribution>
+      <ChangeBaudRate>yes</ChangeBaudRate>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>TesterPresent</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>TesterPresent</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Type0_RE_UserPc_VirtualCan_1Way_ReadWrite</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ExternalApplication>C:\PROVEtech_Libs\RE_Peers_x32\GenericApps\CopySignalOnChange_GenApp\CopySignalOnChange_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>C:\PROVEtech_Cfg\GM_HUD\C-HUD_9BXX\Iteration1\Type0_RE_UserPc_VirtualCan_1Way_ReadWrite2017.458.txt</ExternalApplicationInfo>
+      <HideName>yes</HideName>
+    </Config>
+  </Peer>
+  <SignalConnectionFile>C:\PROVEtech_Cfg\GM_HUD\C-HUD_9BXX\Iteration1\Type0_RE_UserPc_VirtualCan_2Way_Write_2017.458.txt</SignalConnectionFile>
+</RCConfiguration>

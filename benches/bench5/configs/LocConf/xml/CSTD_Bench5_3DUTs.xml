@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+  <DebugLevel>1</DebugLevel>
+  
+
+	  <Package>
+		<Path> . </Path>
+		<Name> RCVector.dll </Name>
+	  </Package>
+	  <Package>
+		<Path> . </Path>
+		<Name> RCCAN.dll </Name>
+	  </Package>
+	  <Package>
+		<Path> . </Path>
+		<Name> RCModelCom.dll </Name>
+	  </Package>
+	  <Package>
+		<Path> . </Path>
+		<Name> RCEventSource.dll </Name>
+	  </Package>
+	  <Package>
+		<Path> . </Path>
+		<Name> RCDisassembly.dll </Name>
+	  </Package>
+	  <Package>
+		<Path>.</Path>
+		<Name>RCRBS.dll</Name>
+	  </Package>
+	  <Package>
+		<Path>.</Path>
+		<Name>RCGenericApplication.dll</Name>
+	  </Package>
+	  <Package>
+		<Path> . </Path>
+		<Name> RCModel.dll </Name>
+	  </Package>
+ 
+	<Package>
+		<Name>RCGenericDevice.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCDigital.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCAnalog.dll</Name>
+	</Package> 
+	
+
+	
+	
+ <EventSource>
+    <Name> Idle </Name>
+    <Class> RC_CIdle </Class>
+  </EventSource>
+  <EventSource>
+    <Name> SysClock </Name>
+    <Class> RC_CSysClock </Class>
+    <Config>
+      <Attribute>
+        <TimerPeriod_ms> 10 </TimerPeriod_ms>
+      </Attribute>
+    </Config>
+  </EventSource>
+  <EventSource>
+		<Name>SysClock100ms</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>100</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_CAN</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>1</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+  <!-- END of NIMIO example-->
+
+<Device>
+    <Name> Vector </Name>
+    <Class> RC_CXLDevice </Class>
+    <Config>
+      <clock_src>SysClock_CAN</clock_src>
+      
+      <Port>
+        <Name>Device1.BH_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>VN7572 Channel 1,0,0</HWPort>
+          <BitRate>125000</BitRate>
+           <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>Device2.BH_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>VN7572 Channel 2,0,1</HWPort>
+          <BitRate>125000</BitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>Device3.BH_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>VN7572 Channel 3,0,2</HWPort>
+         <BitRate>125000</BitRate>
+           <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_B-CAN_CR18672_23042021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	 
+	  <!--------------------------------------------------------------------FDl_CAN--------------------------------------------------------------------------------------------->
+	  <Port>
+        <Name>Device1.FD1_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+		  <HWPort>VN1530 Channel 1,0,0</HWPort>
+         <BitRate>500000</BitRate>
+          <DataBitRate>2000000</DataBitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>Device2.FD1_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+          <HWPort>VN1530 Channel 2,0,1</HWPort>
+          <BitRate>500000</BitRate>
+          <DataBitRate>2000000</DataBitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  <Port>
+        <Name>Device3.FD1_CAN</Name>
+        <Class> RC_CCANPort </Class>
+        <Config>
+		  <HWPort>VN1530 Channel 3,0,2</HWPort>
+         <BitRate>500000</BitRate>
+          <DataBitRate>2000000</DataBitRate>
+          <NWDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.dbc</NWDescriptor>
+          <RBSDescriptor>C:\PROVEtech_Cfg\Maserati_Displays\_BusSignalDef\PMASAH_E2A_R4_CR18403_19032021\PMASAH_E2A_R4_FD-CAN1_CR18403_19032021.xml</RBSDescriptor>
+        </Config>
+      </Port>
+	  
+	 
+	  
+    </Config>
+  </Device>
+ 
+  <!--ENTER <Device>..........</Device> HERE-->
+  <Peer>
+    <Name>ModelCom</Name>
+    <Class>RC_CModelCom</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Device1.BH_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device1.BH_CAN</Port>
+    </Config>
+  </Peer>
+   <Peer>
+    <Name>Device1.BH_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device1.BH_CAN</Port>
+    </Config>
+  </Peer>
+  
+  <Peer>
+    <Name>Device2.BH_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device2.BH_CAN</Port>
+    </Config>
+  </Peer>
+   <Peer>
+    <Name>Device2.BH_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device2.BH_CAN</Port>
+    </Config>
+  </Peer>
+  
+  <Peer>
+    <Name>Device3.BH_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device3.BH_CAN</Port>
+    </Config>
+  </Peer>
+   <Peer>
+    <Name>Device3.BH_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device3.BH_CAN</Port>
+    </Config>
+  </Peer>
+  
+  
+  
+  
+  <Peer>
+    <Name>Device1.FD1_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device1.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Device1.FD1_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device1.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  
+   <Peer>
+    <Name>Device2.FD1_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device2.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Device2.FD1_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device2.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  
+   <Peer>
+    <Name>Device3.FD1_CAN</Name>
+    <Class>RC_CDisassembler</Class>
+    <Config>
+      <Port>Device3.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>Device3.FD1_CAN_Tx</Name>
+    <Class>RC_CRBS</Class>
+    <Config>
+      <Port>Device3.FD1_CAN</Port>
+    </Config>
+  </Peer>
+  
+ 
+    <!--**************************************************************************
+                                      ADVENTECH POWER PRODUCT
+  ***********************************************************************************-->
+ <Device>
+	  <Name>Advantech_USB_Modules</Name>
+	  <Class>RC_CGenericDevice</Class>
+	  <Config>
+	    <clock_src>SysClock</clock_src>
+	    <ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+	    <ExternalDeviceConfigInfo>8</ExternalDeviceConfigInfo>
+		<Port>
+        <Name>Rack1_Out</Name>
+        <Class>RC_CDigitalOutPort</Class>
+        <Config>
+          <DeviceID>PCI-1751Rack1,BID#2</DeviceID>
+          <Width>bool</Width>
+					<SignalSrc>
+				        <Name>Device1.P_CAN</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device1.B1</Name>
+						<HWSignalSource>3/1/1</HWSignalSource>
+						
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device1.C1</Name>
+						<HWSignalSource>3/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Device2.P_CAN</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+				        <Name>Device2.B1</Name>
+						<HWSignalSource>3/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device2.C1</Name>
+						<HWSignalSource>3/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Device3.P_CAN</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+				        <Name>Device3.B1</Name>
+						<HWSignalSource>4/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device3.C1</Name>
+						<HWSignalSource>4/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Device4.P_CAN</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+				        <Name>Device4.B1</Name>
+						<HWSignalSource>4/1/5</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device4.C1</Name>
+						<HWSignalSource>4/1/6</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Device5.P_CAN</Name>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+				        <Name>Device5.B1</Name>
+						<HWSignalSource>5/1/1</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				        <Name>Device5.C1</Name>
+						<HWSignalSource>5/1/2</HWSignalSource>
+						<Description>Card01 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+							
+		 </Config>
+	    </Port>
+		<Port>
+				<Name>Clim_Room</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>PCI-1751Rack1,BID#2</DeviceID>
+					<Width>uint8</Width>			
+					<SignalSrc>
+						<Name>Clim_Room_SW</Name>
+						<IsInverted>YES</IsInverted>
+						<HWSignalSource>0/1/5:7</HWSignalSource>
+						<Description>Card02 Do bool(In) Port : 0 And Line : 5 to 7</Description>
+					</SignalSrc>
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>Sleep_mode</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>PCI-1751Rack1,BID#2</DeviceID>
+					<Width>bool</Width>			
+					<SignalSrc>
+						<Name>Sleep_mode</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>1/1/7</HWSignalSource>
+						<Description>Card02 Do bool(In) Port : 1 And Line : 7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Touch.Relay_1</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/0</HWSignalSource>
+						<Description> Dig bool(In) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Touch.Relay_2</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/4</HWSignalSource>
+						<Description> Dig bool(In) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Touch.Relay_3</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>1/1/0</HWSignalSource>
+						<Description> Dig bool(In) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Touch.Relay_4</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>1/1/4</HWSignalSource>
+						<Description> Dig bool(In) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Touch.Relay_5</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>2/1/0</HWSignalSource>
+						<Description> Dig bool(In) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+				</Config>
+			</Port>
+		 <!--**************************************************************************
+                                      SWITCH CURRENT
+  ***********************************************************************************-->
+		<Port>
+	      <Name>Sw_Current_BOX</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>SWCURRENT</DeviceID>
+	        <Width>bool</Width>
+			<SignalSrc>
+			  <Name>SW_CURRENT_1</Name>			  
+			  <HWSignalSource>0/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_2</Name>			  
+			  <HWSignalSource>0/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_3</Name>			  
+			  <HWSignalSource>0/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_4</Name>			  
+			  <HWSignalSource>0/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>SW_CURRENT_5</Name>			  
+			  <HWSignalSource>0/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+		
+			<SignalSrc>
+			  <Name>Sense.SW_SENSE_1</Name>			  
+			  <HWSignalSource>3/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Sense.SW_SENSE_2</Name>			  
+			  <HWSignalSource>3/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Sense.SW_SENSE_3</Name>			  
+			  <HWSignalSource>3/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Sense.SW_SENSE_4</Name>			  
+			  <HWSignalSource>3/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Sense.SW_SENSE_5</Name>			  
+			  <HWSignalSource>3/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+	      </Config>
+	    </Port>
+		
+		
+		<Port>
+	      <Name>Rack_Touch_Part1</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>Rack_Touch_part1</DeviceID>
+	        <Width>bool</Width>
+			<SignalSrc>
+			  <Name>Dut1.Touch1</Name>			  
+			  <HWSignalSource>3/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut1.Touch2</Name>			  
+			  <HWSignalSource>3/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut1.Touch3</Name>			  
+			  <HWSignalSource>3/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut1.Touch4</Name>			  
+			  <HWSignalSource>3/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut1.Lightsensor_1</Name>			  
+			  <HWSignalSource>3/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut1.Lightsensor_2</Name>			  
+			  <HWSignalSource>3/1/5</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			
+			<SignalSrc>
+			  <Name>Dut2.Touch1</Name>			  
+			  <HWSignalSource>4/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut2.Touch2</Name>			  
+			  <HWSignalSource>4/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut2.Touch3</Name>			  
+			  <HWSignalSource>4/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut2.Touch4</Name>			  
+			  <HWSignalSource>4/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut2.Lightsensor_1</Name>			  
+			  <HWSignalSource>4/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut2.Lightsensor_2</Name>			  
+			  <HWSignalSource>4/1/5</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			
+			<SignalSrc>
+			  <Name>Dut3.Touch1</Name>			  
+			  <HWSignalSource>5/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut3.Touch2</Name>			  
+			  <HWSignalSource>5/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut3.Touch3</Name>			  
+			  <HWSignalSource>5/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut3.Touch4</Name>			  
+			  <HWSignalSource>5/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut3.Lightsensor_1</Name>			  
+			  <HWSignalSource>5/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut3.Lightsensor_2</Name>			  
+			  <HWSignalSource>5/1/5</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+	      </Config>
+	    </Port>
+		
+		
+		<Port>
+	      <Name>Rack_Touch_Part2</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>Rack_Touch_part2</DeviceID>
+	        <Width>bool</Width>
+			<SignalSrc>
+			  <Name>Dut4.Touch1</Name>			  
+			  <HWSignalSource>3/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut4.Touch2</Name>			  
+			  <HWSignalSource>3/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut4.Touch3</Name>			  
+			  <HWSignalSource>3/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut4.Touch4</Name>			  
+			  <HWSignalSource>3/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut4.Lightsensor_1</Name>			  
+			  <HWSignalSource>3/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut4.Lightsensor_2</Name>			  
+			  <HWSignalSource>3/1/5</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			
+			<SignalSrc>
+			  <Name>Dut5.Touch1</Name>			  
+			  <HWSignalSource>4/1/0</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut5.Touch2</Name>			  
+			  <HWSignalSource>4/1/1</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut5.Touch3</Name>			  
+			  <HWSignalSource>4/1/2</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut5.Touch4</Name>			  
+			  <HWSignalSource>4/1/3</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut5.Lightsensor_1</Name>			  
+			  <HWSignalSource>4/1/4</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+			  <Name>Dut5.Lightsensor_2</Name>			  
+			  <HWSignalSource>4/1/5</HWSignalSource>
+			  <Description>Card02 Do bool(Out) Port : 5 And Line : 4</Description>
+			</SignalSrc>
+			
+			
+	      </Config>
+	    </Port>
+		
+	  </Config>
+	</Device>
+
+
+	
+<!--**************************************************************************
+                                       DMM
+  ***********************************************************************************-->
+   <Peer>
+		<Name>DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_DMM</clock_src>
+			<tick>0.1</tick>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012.dll</ExternalApplication>
+			<ExternalApplicationInfo>169.254.211.44,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>	
+	
+<!--**************************************************************************
+                                       power supply
+  ***********************************************************************************-->
+  <Peer>
+    <Name>PowerSupply</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock100ms</clock_src>
+      <tick>0.05</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\PowerSupply_COM_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>COM1;CH_1-&gt;[I=30][V=13.5][OVP=23][OCP=30][ErrTimeout_s=60][Out=1];</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+	<Peer>
+    <Name>CS</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_DMM</clock_src>
+	  <HideName>YES</HideName>      
+      <tick>0.1</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppPsCS.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\GenericApps\Env_cstd.ini,POWER_SUPPLY_,5</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  <!--******************************************************************************************
+                                        Debug Variable
+	*******************************************************************************************-->
+	<Peer>
+		<Name>debug</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>No</HideName>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\DebugVariables_2017.dll</ExternalApplication>
+			<ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\GenericApps\DbgVar.txt</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+	
+	<!--**************************************************************************
+                                   Probe 
+   **************************************************************************-->	
+
+	<Peer>
+		<Name>Probe</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>NO</HideName>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+			<ExternalApplicationInfo>127.0.0.1::11001</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+  <!--Peer>
+    <Name>VinMsg</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulation\SignalManipulation.dll</ModelDll>
+      <RootNodeName>VinMsg</RootNodeName>
+    </Config>
+  </Peer>
+  <Peer>
+    <Name>CLIMATE</Name>
+    <Class>RC_CModel</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+      <ModelHeader>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.h</ModelHeader>
+      <ModelDll>C:\PROVEtech_Libs\RE_Peers_x32\Simulink\SignalManipulationV2\SignalManipulationV2.dll</ModelDll>
+      <RootNodeName>CLIMATE</RootNodeName>
+    </Config>
+  </Peer>
+
+  <SignalConnectionFile>C:\PROVEtech_Cfg\Maserati_Displays\Maserati_Displays_M182_M189\Iteration05\2021.191\Type0_RE_UserPc_VirtualCan.2Way_Write_.txt</SignalConnectionFile-->
+</RCConfiguration>

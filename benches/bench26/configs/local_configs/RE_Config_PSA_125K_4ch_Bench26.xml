@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<RCConfiguration>
+	<!-- DebugLevel 0: all, 1: warnings and errors, 2: only errors, default is “1” -->
+	<DebugLevel>0</DebugLevel>
+	<Package>
+		<Path> . </Path>
+		<Name> RCVector.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCGenericDevice.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCCAN.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCGeneric.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCAnalog.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCDigital.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCPWM.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCModelCom.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCEventSource.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCDisassembly.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCRBS.dll </Name>
+	</Package>
+	<Package>
+		<Path>.</Path>
+		<Name>RCGoepel.dll</Name>
+	</Package>
+	 <Package>
+		<Path>.</Path>
+		<Name>RCGenericApplication.dll</Name>
+   </Package>
+	<EventSource>
+		<!-- Name of the player -->
+		<Name> Idle </Name>
+		<!--Name of the Class to be used to create the player -->
+		<Class> RC_CIdle </Class>
+		<Config />
+	</EventSource>
+	<EventSource>
+		<Name> SysClock </Name>
+		<Class> RC_CSysClock </Class>
+		<!-- Player specific configuration -->
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms> 40 </TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+		</Config>
+	</EventSource>	
+	
+	
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	<EventSource>
+		<Name>SysClock_CS</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_200ms</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_PS</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>30</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	<EventSource>
+		<Name>SysClock_SMirror</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>10</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+
+	<Device>
+		<Name>GenericDevice</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalDevice>USBCANDevice.dll</ExternalDevice>
+			<Port>
+			  <Name>Device1.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>1,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			<Port>
+			  <Name>Device2.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>2,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			<Port>
+			  <Name>Device3.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>3,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			
+				<Port>
+			  <Name>Device4.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>4,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+		
+			
+	  </Config>
+	</Device>
+	<Device>
+	  <Name>Advantech_USB_Modules</Name>
+	  <Class>RC_CGenericDevice</Class>
+	  <Config>
+	    <clock_src>SysClock</clock_src>
+	    <ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+	    <ExternalDeviceConfigInfo>2</ExternalDeviceConfigInfo>
+
+	    <Port>
+	      <Name>Rack1_Out</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>PCI-1751Rack1OUT,BID#2</DeviceID>
+	        <Width>bool</Width>
+			<!--SignalSrc>
+				<Name>Device1.P_CAN</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.P_CAN</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/4</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/5</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 5</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/6</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 6</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/7</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 7</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/4</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 4</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/5</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 5</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/6</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 6</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/7</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 7</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.P_CAN</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 4 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 4 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 4 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 4 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 1 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 1 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 1 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 1 And Line : 3</Description>
+			</SignalSrc-->
+			
+			<SignalSrc>
+				<Name>Device1.P_CAN</Name>
+				<HWSignalSource>3/1/0</HWSignalSource>
+				<Description>PCI card Rack1INOUT Port : 3 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device1.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 3</Description>
+			</SignalSrc>
+			
+			<SignalSrc>
+						<Name>Device2.P_CAN</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					<SignalSrc>
+				<Name>Device2.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/5</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/6</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>3/1/7</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/4</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/5</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/6</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device2.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>0/1/7</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 3</Description>
+			</SignalSrc>
+			
+			<SignalSrc>
+						<Name>Device3.P_CAN</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<SignalSrc>
+						<Name>Device4.P_CAN</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI card Rack1INOUT Port : 4 And Line : 4</Description>
+					</SignalSrc>
+					
+					
+					<SignalSrc>
+				<Name>Device3.Din1</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din2</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din3</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>4/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 3 And Line : 3</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din4</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/0</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 0</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din5</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/1</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 1</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din6</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/2</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 2</Description>
+			</SignalSrc>
+			<SignalSrc>
+				<Name>Device3.Din7</Name>
+				<IsInverted>No</IsInverted>
+				<HWSignalSource>1/1/3</HWSignalSource>
+				<Description> Dig bool(Out) Port : 0 And Line : 3</Description>
+			</SignalSrc>
+			
+	      </Config>
+	    </Port>
+	    <Port>
+	      <Name>Clim_Room</Name>
+	      <Class>RC_CDigitalInPort</Class>
+	      <Config>
+	        <DeviceID>PCI-1751Rack1IN,BID#0</DeviceID>
+	        <Width>uint8</Width>			<SignalSrc>
+			  <Name>Clim_Room_SW</Name>
+			  <HWSignalSource>2/1/4:6</HWSignalSource>
+			  <Description>Card02 Do bool(In) Port : 5 And Line : 4 to 6</Description>
+			</SignalSrc>
+
+	      </Config>
+	    </Port>
+	    <Port>
+	      <Name>Rack1_In</Name>
+	      <Class>RC_CDigitalInPort</Class>
+	      <Config>
+	        <DeviceID>PCI-1751Rack1IN,BID#0</DeviceID>
+	        <Width>bool</Width>
+			<SignalSrc>
+			  <Name>Sleep_mode</Name>
+			  <IsInverted>Yes</IsInverted>
+			  <HWSignalSource>2/1/7:7</HWSignalSource>
+			  <Description>Card02 Do bool(In) Port : 5 And Line : 7</Description>
+			</SignalSrc>
+	      </Config>
+	    </Port>
+	    
+	    <Port>
+	      <Name>Current_SW_Box</Name>
+	      <Class>RC_CDigitalOutPort</Class>
+	      <Config>
+	        <DeviceID>SWCURRENT</DeviceID>
+	        <Width>bool</Width>
+	        
+			<SignalSrc>
+	          <Name>SW_CURRENT_1</Name>
+	          <HWSignalSource>0/1/0</HWSignalSource>
+	          <Description>Do Port  0 And Line 0</Description>
+	        </SignalSrc>     
+						
+	        <SignalSrc>
+	          <Name>Sense.SW_SENSE_1</Name>
+	          <HWSignalSource>3/1/0</HWSignalSource>
+	          <Description>Do Port 3 And Line0</Description>
+	        </SignalSrc>
+			
+			    <SignalSrc>
+	          <Name>SW_CURRENT_2</Name>
+	          <HWSignalSource>0/1/1</HWSignalSource>
+	          <Description>Do Port  0 And Line 0</Description>
+	        </SignalSrc>     
+						
+	        <SignalSrc>
+	          <Name>Sense.SW_SENSE_2</Name>
+	          <HWSignalSource>3/1/1</HWSignalSource>
+	          <Description>Do Port 3 And Line0</Description>
+	        </SignalSrc>
+			
+			<SignalSrc>
+	          <Name>SW_CURRENT_3</Name>
+	          <HWSignalSource>0/1/2</HWSignalSource>
+	          <Description>Do Port  0 And Line 0</Description>
+	        </SignalSrc>     
+						
+	        <SignalSrc>
+	          <Name>Sense.SW_SENSE_3</Name>
+	          <HWSignalSource>3/1/2</HWSignalSource>
+	          <Description>Do Port 3 And Line0</Description>
+	        </SignalSrc>
+			
+	       <SignalSrc>
+	          <Name>SW_CURRENT_4</Name>
+	          <HWSignalSource>0/1/3</HWSignalSource>
+	          <Description>Do Port  0 And Line 0</Description>
+	        </SignalSrc>     
+						
+	        <SignalSrc>
+	          <Name>Sense.SW_SENSE_4</Name>
+	          <HWSignalSource>3/1/3</HWSignalSource>
+	          <Description>Do Port 3 And Line0</Description>
+	        </SignalSrc>       
+
+	      </Config>
+	    </Port>
+
+	  </Config>
+	</Device>
+	
+	
+	
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+		</Config>
+	</Peer>
+	<Peer>
+	  <Name>Device1.CAN_BD</Name>
+	  <Class>RC_CDisassembler</Class>
+	  <Config>
+	    <Port>Device1.CAN_BD</Port>
+	  </Config>
+	</Peer>
+	<Peer>
+	  <Name>Device1.CAN_BD_Tx</Name>
+	  <Class>RC_CRBS</Class>
+	  <Config>
+	    <Port>Device1.CAN_BD</Port>
+	    <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+	  </Config>
+	 </Peer>
+
+	<Peer>
+	  <Name>Device2.CAN_BD</Name>
+	  <Class>RC_CDisassembler</Class>
+	  <Config>
+	    <Port>Device2.CAN_BD</Port>
+	  </Config>
+	</Peer>
+	<Peer>
+	  <Name>Device2.CAN_BD_Tx</Name>
+	  <Class>RC_CRBS</Class>
+	  <Config>
+	    <Port>Device2.CAN_BD</Port>
+	    <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+	  </Config>
+	 </Peer>
+
+	<Peer>
+	  <Name>Device3.CAN_BD</Name>
+	  <Class>RC_CDisassembler</Class>
+	  <Config>
+	    <Port>Device3.CAN_BD</Port>
+	  </Config>
+	</Peer>
+	<Peer>
+	  <Name>Device3.CAN_BD_Tx</Name>
+	  <Class>RC_CRBS</Class>
+	  <Config>
+	    <Port>Device3.CAN_BD</Port>
+	    <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+	  </Config>
+	 </Peer>
+	 
+	 	<Peer>
+	  <Name>Device4.CAN_BD</Name>
+	  <Class>RC_CDisassembler</Class>
+	  <Config>
+	    <Port>Device4.CAN_BD</Port>
+	  </Config>
+	</Peer>
+	<Peer>
+	  <Name>Device4.CAN_BD_Tx</Name>
+	  <Class>RC_CRBS</Class>
+	  <Config>
+	    <Port>Device4.CAN_BD</Port>
+	    <RenameSignalActivate>Tx_Enable</RenameSignalActivate>
+	  </Config>
+	 </Peer>
+
+
+	<Peer>
+	<Name>Probe</Name>
+	<Class>RC_CGenericApplication</Class>
+	<Config>
+		<clock_src>SysClock_200ms</clock_src>
+		<HideName>NO</HideName>
+		<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+		
+		<!-- ExternalApplicationInfo>IP Address Server::11001</ExternalApplicationInfo -->
+		<ExternalApplicationInfo>FRDC231813::11001</ExternalApplicationInfo>
+	</Config>
+</Peer>
+	
+
+	
+	
+
+	<Peer>
+	  <Name>CS</Name>
+	   <Class>RC_CGenericApplication</Class>
+	   <Config>
+	      <clock_src>SysClock_CS</clock_src>
+	      <HideName>YES</HideName>
+	      <tick>0.1</tick>
+	      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppPsCS.dll</ExternalApplication>
+	     
+		   <ExternalApplicationInfo>C:\PROVEtech_Cfg\PSA_Clusters\Env.ini,4,P_CAN</ExternalApplicationInfo>
+		 
+	  </Config>
+	</Peer>
+
+
+	<!-- <Peer> -->
+    <!-- <Name>Volt</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock_DMM</clock_src> -->
+	  <!-- <HideName>NO</HideName>       -->
+      <!-- <tick>0.1</tick> -->
+      <!-- <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenericAppsAgilent.dll</ExternalApplication> -->
+      <!-- <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\Env_Volt.ini</ExternalApplicationInfo> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+
+ <Peer>
+    <Name>DMM</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_DMM</clock_src>
+	  <HideName>Yes</HideName>      
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppNI_DMM.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\Env.ini</ExternalApplicationInfo>
+	   
+    </Config>
+  </Peer>  
+
+  
+
+  <Peer>
+    <Name>debug</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+	  <HideName>NO</HideName> 
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\DebugVariables_2017.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\DbgVar.txt</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+
+  
+  
+  <Peer>
+    <Name>PowerSupply</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_PS</clock_src>
+      <tick>0.01</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\PowerSupply_COM_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>COM1;CH_1-&gt;[I=20][V=13.5][OVP=23][OCP=11][ErrTimeout_s=60][Out=1];CH_2-&gt;[I=10][V=14.4][OVP=16][OCP=11][ErrTimeout_s=60][Out=1]</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+   <Peer> 
+		<Name>gen</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>NO</HideName> 
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\dllgen\TestDLL.dll</ExternalApplication>
+		</Config>
+	</Peer>
+  
+</RCConfiguration>
+

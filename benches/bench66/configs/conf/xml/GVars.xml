@@ -1,0 +1,12 @@
+<Resources>
+  <GVar Name="SoundLib">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\_SoundLib\SILENCE.wav</GVar>
+  <GVar Name="VisAcqConf">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\_VisAcqConf\VisionAcquisition.xml</GVar>
+  <GVar Name="VisionAbcCatalog">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\_VisionAbcCatalog\-001-SPEEDO_DIGITAL.abc</GVar>
+  <GVar Name="VisionPatterns">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\_VisionPatterns\ADAS_icon_LDW_GREY.tiff</GVar>
+  <GVar Name="BUIC_Definitions">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\BUIC.xlsm</GVar>
+  <GVar Name="BUIC_ID">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\buic_table.xls</GVar>
+  <GVar Name="MenuConfigPath">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\GoToMenu.xlsm</GVar>
+  <GVar Name="MultyCheckObjPath">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\HMI_Definition.xlsx</GVar>
+  <GVar Name="PID_Definitions">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\PID_Definitions.xlsx</GVar>
+  <GVar Name="Translation_Definitons">C:\PROVEtech_Cfg\RSA_Clusters\RSA_Clusters_X52_M0_IC\Iteration_03_L2AEVO\2216.1805\GAMMA.xlsx</GVar>
+</Resources>

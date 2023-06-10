@@ -1,0 +1,9 @@
+<Resources>
+  <GVar Name="VisionAbcCatalog">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\_VisionAbcCatalog\-001-odometer_ice_bev.abc</GVar>
+  <GVar Name="VisionPatterns">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\_VisionPatterns\2BoxHatchBack.png</GVar>
+  <GVar Name="VisAcqConf">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\_VisAcqConf\VisionAcquisition_BGD9XG2J82.xml</GVar>
+  <GVar Name="MultyCheckObjPath">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\HMI_Definition.xlsx</GVar>
+  <GVar Name="UnlockDLL">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\MFG_SEA_E3.dll</GVar>
+  <GVar Name="PID_Definitons">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\PSA_P2M_NVM.xlsx</GVar>
+  <GVar Name="AlarmTables">C:\PROVEtech_Cfg\PSA_Clusters\PSA_IC_P2M\Iteration_21Q3\2022.170\02017_12_04206_STD_Liste_Libelles_IHM_CMB_MOD_MAT.xlsm</GVar>
+</Resources>

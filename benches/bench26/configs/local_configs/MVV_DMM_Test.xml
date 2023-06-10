@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<RCConfiguration>
+	<!-- DebugLevel 0: all, 1: warnings and errors, 2: only errors, default is “1” -->
+	<DebugLevel>0</DebugLevel>
+	<Package>
+		<Path> . </Path>
+		<Name> RCVector.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCGenericDevice.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCCAN.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCGeneric.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCAnalog.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCDigital.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCPWM.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCModelCom.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCEventSource.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCDisassembly.dll </Name>
+	</Package>
+	<Package>
+		<Path> . </Path>
+		<Name> RCRBS.dll </Name>
+	</Package>
+	<Package>
+		<Path>.</Path>
+		<Name>RCGoepel.dll</Name>
+	</Package>
+	 <Package>
+		<Path>.</Path>
+		<Name>RCGenericApplication.dll</Name>
+   </Package>
+	<EventSource>
+		<!-- Name of the player -->
+		<Name> Idle </Name>
+		<!--Name of the Class to be used to create the player -->
+		<Class> RC_CIdle </Class>
+		<Config />
+	</EventSource>
+	<EventSource>
+		<Name> SysClock </Name>
+		<Class> RC_CSysClock </Class>
+		<!-- Player specific configuration -->
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms> 40 </TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+		</Config>
+	</EventSource>	
+	
+	
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	<EventSource>
+		<Name>SysClock_CS</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>50</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_200ms</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	<EventSource>
+		<Name>SysClock_PS</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>30</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	<EventSource>
+		<Name>SysClock_SMirror</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Interface />
+			<Attribute>
+				<TimerPeriod_ms>10</TimerPeriod_ms>
+			</Attribute>
+			<Signal />
+			<Datagram />
+			<Player />
+	</Config>
+	</EventSource>
+	
+	
+
+	<Device>
+		<Name>GenericDevice</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalDevice>USBCANDevice.dll</ExternalDevice>
+			<Port>
+			  <Name>Device1.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>1,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			<Port>
+			  <Name>Device2.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>2,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			<Port>
+			  <Name>Device3.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>3,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+			
+				<Port>
+			  <Name>Device4.CAN_BD</Name><!-- HWIndexVersion :3-->
+			  <Class> RC_CCANPort </Class>
+			  <Config>
+			    <HWPort>4,1</HWPort>
+			    <AckBit>1</AckBit>
+			    <BitRate>125000</BitRate>
+			    <NWDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.dbc</NWDescriptor>
+			    <RBSDescriptor>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\_BusSignalDef\02017_16_04646_CAN_P2M_IND2\CAN_LS_CMB_MOD2_NUM2_IND2.xml</RBSDescriptor>
+			  </Config>
+			</Port>
+		
+			
+	  </Config>
+	</Device>
+	
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+		</Config>
+	</Peer>
+
+	<Peer>
+	<Name>Probe</Name>
+	<Class>RC_CGenericApplication</Class>
+	<Config>
+		<clock_src>SysClock_200ms</clock_src>
+		<HideName>NO</HideName>
+		<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+		
+		<!--ExternalApplicationInfo>IP Address Server::11001</ExternalApplicationInfo-->
+		<ExternalApplicationInfo>FRDC231813::11001</ExternalApplicationInfo>
+	</Config>
+  </Peer> 
+	
+
+	
+	
+
+	<Peer>
+	  <Name>CS</Name>
+	   <Class>RC_CGenericApplication</Class>
+	   <Config>
+	      <clock_src>SysClock_CS</clock_src>
+	      <HideName>YES</HideName>
+	      <tick>0.1</tick>
+	      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppPsCS.dll</ExternalApplication>
+	     
+		   <ExternalApplicationInfo>C:\PROVEtech_Cfg\PSA_Clusters\Env.ini,4,P_CAN</ExternalApplicationInfo>
+		 
+	  </Config>
+	</Peer>
+
+
+	<!-- <Peer> -->
+    <!-- <Name>Volt</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock_DMM</clock_src> -->
+	  <!-- <HideName>NO</HideName>       -->
+      <!-- <tick>0.1</tick> -->
+      <!-- <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenericAppsAgilent.dll</ExternalApplication> -->
+      <!-- <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\Env_Volt.ini</ExternalApplicationInfo> -->
+    <!-- </Config> -->
+  <!-- </Peer> -->
+
+ <!-- <Peer> -->
+    <!-- <Name>DMM</Name> -->
+    <!-- <Class>RC_CGenericApplication</Class> -->
+    <!-- <Config> -->
+      <!-- <clock_src>SysClock_DMM</clock_src> -->
+	  <!-- <HideName>Yes</HideName>       -->
+      <!-- <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppNI_DMM.dll</ExternalApplication> -->
+	  <!-- <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\Env.ini</ExternalApplicationInfo> -->
+	   
+    <!-- </Config> -->
+  <!-- </Peer>   -->
+
+  
+    <Peer>
+		<Name>DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_DMM</clock_src>
+			<tick>0.1</tick>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012.dll</ExternalApplication>
+			<ExternalApplicationInfo>169.254.105.251,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+	
+	
+  <Peer>
+    <Name>debug</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock</clock_src>
+	  <HideName>NO</HideName> 
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\DebugVariables_2017.dll</ExternalApplication>
+	  <ExternalApplicationInfo>C:\JCI_PROVEtech_Libs\CFG\PSA_Clusters\DbgVar.txt</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+
+  
+  
+  <Peer>
+    <Name>PowerSupply</Name>
+    <Class>RC_CGenericApplication</Class>
+    <Config>
+      <clock_src>SysClock_PS</clock_src>
+      <tick>0.01</tick>
+      <ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\PowerSupply_COM_GenApp.dll</ExternalApplication>
+      <ExternalApplicationInfo>COM2;CH_1-&gt;[I=20][V=13.5][OVP=23][OCP=11][ErrTimeout_s=60][Out=1];CH_2-&gt;[I=10][V=14.4][OVP=16][OCP=11][ErrTimeout_s=60][Out=1]</ExternalApplicationInfo>
+    </Config>
+  </Peer>
+  
+   <Peer> 
+		<Name>gen</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<HideName>NO</HideName> 
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\dllgen\TestDLL.dll</ExternalApplication>
+		</Config>
+	</Peer>
+  
+</RCConfiguration>

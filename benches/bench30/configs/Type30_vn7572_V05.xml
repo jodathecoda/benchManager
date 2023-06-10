@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RCConfiguration>
+	<DebugLevel>1</DebugLevel>
+	<Package>
+		<Name>RCAnalog.dll</Name>
+	</Package> 
+	<Package>
+		<Name>RCVector.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGoepel.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCCAN.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCGeneric.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCModelCom.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCEventSource.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDisassembly.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCRBS.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericDevice.dll </Name>
+	</Package>
+	<Package>
+		<Name>RCDigital.dll</Name>
+	</Package>
+	<Package>
+		<Name>RCGenericApplication.dll </Name>
+	</Package>
+	
+<!-- *********************************************************************************************************************-->
+<!--      										         Clock															  -->
+<!-- *********************************************************************************************************************-->    
+	<EventSource>
+		<Name> Idle </Name>
+		<Class> RC_CIdle </Class>
+	</EventSource>
+	<EventSource>
+		<Name> SysClock </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>30</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name>SysClock_DMM</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>25</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_CAN </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>4</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+	<EventSource>
+		<Name> SysClock_PS </Name>
+		<Class> RC_CSysClock </Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>100</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+
+<!-- *********************************************************************************************************************-->
+<!--      										         CANV HS														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name> Vector </Name>
+		<Class> RC_CXLDevice </Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<Port>
+				<Name>CANV_HS_1</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 1,0,0</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_2</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 2,0,1</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_3</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 3,0,2</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_4</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 4,0,3</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_5</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 5,0,4</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_6</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 6,0,5</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_7</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 7,0,6</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+			<Port>
+				<Name>CANV_HS_8</Name>
+				<Class> RC_CCANPort </Class>
+				<Config>          
+					<HWPort>VN7572 Channel 8,0,7</HWPort>
+					<BitRate>500000</BitRate>
+					<NWDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.dbc</NWDescriptor>
+					<RBSDescriptor>C:\PROVEtech_Cfg\RSA_Clusters\_BusSignalDef\RSA_10_1_CID_CentralPanel_M1-CAN\CentralPanel_M1-CAN.xml</RBSDescriptor>
+				</Config>
+			</Port>
+		</Config>
+	</Device>
+	<!-- *********************************************************************************************************************-->
+<!--      										         Rack DUT														  -->
+<!-- *********************************************************************************************************************--> 
+	<Device>
+		<Name>Advantech64Device</Name>
+		<Class>RC_CGenericDevice</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+			<ExternalDevice>AdvantechUSB64Device.dll</ExternalDevice>
+			<ExternalDeviceConfigInfo>8</ExternalDeviceConfigInfo>
+			<Port>
+				<Name>Rack1_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>PCI-1751,BID#0</DeviceID>
+					<Width>bool</Width>
+			
+					<!-- DUT1 -->
+					<SignalSrc>
+						<Name>Device1.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<!-- DUT2 -->
+					<SignalSrc>
+						<Name>Device2.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT3 -->
+					<SignalSrc>
+						<Name>Device3.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/0</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT4 -->
+					<SignalSrc>
+						<Name>Device4.POWER_SUPPLY</Name>
+						<HWSignalSource>4/1/4</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT5 -->
+					<SignalSrc>
+						<Name>Device5.POWER_SUPPLY</Name>
+						<HWSignalSource>5/1/0</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT6 -->
+					<SignalSrc>
+						<Name>Device6.POWER_SUPPLY</Name>
+						<HWSignalSource>5/1/4</HWSignalSource>
+						<Description>PCI-1751,BID#0 DO bool(Out) Port : 3 And Line : 4</Description>
+					</SignalSrc>
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>Rack2_Out</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>PCI-1751,BID#1</DeviceID>
+					<Width>bool</Width>
+					
+					<!-- DUT7 -->
+					<SignalSrc>
+						<Name>Device7.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>PCI-1751,BID#1 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+					<!-- DUT8 -->
+					<SignalSrc>
+						<Name>Device8.POWER_SUPPLY</Name>
+						<HWSignalSource>3/1/4</HWSignalSource>
+						<Description>PCI-1751,BID#1 DO bool(Out) Port : 3 And Line : 0</Description>
+					</SignalSrc>
+					
+				</Config>
+			</Port>
+			
+			<Port>
+				<Name>Rack2_IN</Name>
+				<Class>RC_CDigitalInPort</Class>
+				<Config>
+					<DeviceID>PCI-1751,BID#0</DeviceID>
+					<Width>uint8</Width>
+					<SignalSrc>
+						<Name>Clim_Room_SW</Name>
+						<IsInverted>No</IsInverted>
+						<HWSignalSource>0/1/5:7</HWSignalSource>
+						<Description>PCI-1751,BID#0 Do bool(Out) Port : 0 And Line : 5-7</Description>
+					</SignalSrc>
+					<SignalSrc>
+						<Name>Sleep_mode</Name>
+						<HWSignalSource>1/1/7:7</HWSignalSource>
+						<Description>PCI-1751,BID#0 Do bool(Out) Port : 1 And Line : 7</Description>
+					</SignalSrc>
+				</Config>
+			</Port>
+			
+			<!-- *********************************************************************************************************************-->
+			<!--      										         Sw current														-->
+			<!-- *********************************************************************************************************************-->
+			
+			<!-- <Port>
+				<Name>Current_SW_Box</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>SWCURRENT</DeviceID>
+					<Width>bool</Width>
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_1</Name>
+						<HWSignalSource>0/1/0</HWSignalSource>
+						<Description>DO Port  0 and Line 0</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENCE_1</Name>
+						<HWSignalSource>1/1/4</HWSignalSource>
+						<Description>DO Port 1 and Line 4</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_Amp</Name>
+						<HWSignalSource>3/1/0</HWSignalSource>
+						<Description>DO Port 3 and Line 0</Description>
+					</SignalSrc>
+				</Config>
+			</Port>	-->
+			
+			<Port>
+				<Name>Current_SW_Box</Name>
+				<Class>RC_CDigitalOutPort</Class>
+				<Config>
+					<DeviceID>SWCURRENT</DeviceID>
+					<Width>bool</Width>
+					
+					<!-- DUT1 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_1</Name>
+						<HWSignalSource>0/0/0</HWSignalSource>
+						<Description>DO Port  0 and Line 0</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_1</Name>
+						<HWSignalSource>3/0/0</HWSignalSource>
+						<Description>DO Port 3 and Line 0</Description>
+					</SignalSrc>
+					
+					<!-- DUT2 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_2</Name>
+						<HWSignalSource>0/0/1</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_2</Name>
+						<HWSignalSource>3/0/4</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT3 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_3</Name>
+						<HWSignalSource>0/0/2</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_3</Name>
+						<HWSignalSource>3/0/5</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT4 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_4</Name>
+						<HWSignalSource>0/0/3</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_4</Name>
+						<HWSignalSource>3/0/6</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT5 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_5</Name>
+						<HWSignalSource>0/0/4</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_5</Name>
+						<HWSignalSource>3/0/7</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT6 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_6</Name>
+						<HWSignalSource>0/0/5</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_6</Name>
+						<HWSignalSource>4/0/0</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT7 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_7</Name>
+						<HWSignalSource>0/0/6</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_7</Name>
+						<HWSignalSource>4/0/1</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+					<!-- DUT8 -->
+					<SignalSrc>
+						<Name>Current.SW_CURRENT_8</Name>
+						<HWSignalSource>0/0/7</HWSignalSource>
+						<Description>DO Port  0 and Line 1</Description>
+					</SignalSrc>
+		
+					<SignalSrc>
+						<Name>Current.SW_SENSE_8</Name>
+						<HWSignalSource>4/0/2</HWSignalSource>
+						<Description>DO Port 3 and Line 4</Description>
+					</SignalSrc>
+					
+				</Config>
+			</Port>
+		</Config>
+	</Device>
+	
+<!-- *********************************************************************************************************************-->
+<!--      										         Peer CAN														  -->
+<!-- *********************************************************************************************************************-->   
+	<Peer>
+		<Name>ModelCom</Name>
+		<Class>RC_CModelCom</Class>
+		<Config>
+			<clock_src>SysClock</clock_src>
+		</Config>
+	</Peer>
+
+	<Peer>
+		<Name>CANV_HS_1</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_1</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_1_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_1</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	
+	<Peer>
+		<Name>CANV_HS_2</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_2</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_2_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_2</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_3</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_3</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_3_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_3</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_4</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_4</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_4_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_4</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_5</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_5</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_5_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_5</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_6</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_6</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_6_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_6</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_7</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_7</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_7_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_7</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_8</Name>
+		<Class>RC_CDisassembler</Class>
+		<Config>
+			<Port>CANV_HS_8</Port>
+		</Config>
+	</Peer>
+	<Peer>
+		<Name>CANV_HS_8_Tx</Name>
+		<Class>RC_CRBS</Class>
+		<Config>
+			<clock_src>SysClock_CAN</clock_src>
+			<Port>CANV_HS_8</Port>
+			<RenameSignalActivate>TX_enable</RenameSignalActivate>
+			<RenameSignalTX_enable>TX_enable</RenameSignalTX_enable>
+			<RenameSignalTX_cycletime>TX_cycletime</RenameSignalTX_cycletime>
+			<RenameSignalTX_kickout>TX_kickout</RenameSignalTX_kickout>
+			<RenameSignalActive>Active</RenameSignalActive>
+			<RenameSignalControl>Control</RenameSignalControl>
+		</Config>
+	</Peer>
+	
+<!-- ********************************************************************************************************************************************-->
+<!--												   Peer DLL																					-->
+<!-- ********************************************************************************************************************************************-->  
+	<Peer>
+		<Name>PowerSupply</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_PS</clock_src>
+			<tick>0.05</tick>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\PowerSupply_COM_GenApp.dll</ExternalApplication>
+			<ExternalApplicationInfo>COM1;CH_1-&gt;[I=30][V=13.5][OVP=23][OCP=30][ErrTimeout_s=60][Out=1];</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+	<!-- *********************************************************************************************************************-->
+	<!--      										      	  DMM															  -->
+	<!-- *********************************************************************************************************************-->  
+	<Peer>
+		<Name>DMM</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_DMM</clock_src>
+			<tick>0.1</tick>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppDMM_HMC8012_v_0_1.dll</ExternalApplication>	
+			<ExternalApplicationInfo>192.168.0.3,5025</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+<!-- *********************************************************************************************************************-->
+<!--      										         Probe														  -->
+<!-- *********************************************************************************************************************-->
+	<EventSource>
+		<Name>SysClock_Probe</Name>
+		<Class>RC_CSysClock</Class>
+		<Config>
+			<Attribute>
+				<TimerPeriod_ms>200</TimerPeriod_ms>
+			</Attribute>
+		</Config>
+	</EventSource>
+	
+	<Peer>
+		<Name>Probe</Name>
+		<Class>RC_CGenericApplication</Class>
+		<Config>
+			<clock_src>SysClock_Probe</clock_src>
+			<HideName>NO</HideName>
+			<ExternalApplication>C:\JCI_PROVEtech_Libs\GenericApps\GenAppTempHumProbe.dll</ExternalApplication>
+			<ExternalApplicationInfo>FRF19040117::11001</ExternalApplicationInfo>
+		</Config>
+	</Peer>
+
+
+</RCConfiguration>
