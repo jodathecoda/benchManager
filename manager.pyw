@@ -105,7 +105,7 @@ def button_edit_handler(param):
         bench_entry.grid(row=4, column=1)
 
         # create a Text widget with a height of 4 and width of 50
-        text_label = tk.Label(editor, text="notes:")
+        text_label = tk.Label(editor, text="DMM:")
         text_label.grid(row=5, column=0)
         notes_entry = tk.Entry(editor)
         notes_entry.insert(0, notes_prompt)
@@ -245,7 +245,7 @@ def get_fg_color(oem_str):
         colorr = 'red'
     elif 'VOLVO' in oem_str or 'volvo' in oem_str or 'Volvo' in oem_str or 'PSA' in oem_str or 'psa' in oem_str:
         colorr = 'white'
-    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
+    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'MRA' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
         colorr = 'white'
     elif 'RSA' in oem_str or 'rsa' in oem_str:
         colorr = 'black'
@@ -275,7 +275,7 @@ def get_bg_color(oem_str):
         colorr = 'yellow'
     elif 'VOLVO' in oem_str or 'volvo' in oem_str or 'Volvo' in oem_str or 'PSA' in oem_str or 'psa' in oem_str:
         colorr = 'blue'
-    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
+    elif 'Daimler' in oem_str or 'daimler' in oem_str or 'Mercedes' in oem_str or 'mercedes' in oem_str or 'mfa' in oem_str or 'mra' in oem_str or 'MRA' in oem_str or 'mopf' in oem_str or 'br' in oem_str or 'BR' in oem_str or 'opel' in oem_str or 'Opel' in oem_str or 'OPEL' in oem_str:
         colorr = 'black'
     elif 'RSA' in oem_str or 'rsa' in oem_str:
         colorr = 'yellow'
@@ -287,6 +287,8 @@ def get_bg_color(oem_str):
         colorr = 'blue'
     elif 'evo' in oem_str or 'Evo' in oem_str or 'EVO' in oem_str or 'GSR' in oem_str or 'gsr' in oem_str or 'GLSR' in oem_str or 'glsr' in oem_str:
          colorr = 'green'
+    elif 'mopf' in oem_str or 'MOPF' in oem_str or 'Mopf' in oem_str:
+        colorr = 'brown'
     else:
         colorr = 'orange'
     #print("bg: " + colorr)
